@@ -21,3 +21,9 @@ Liste; her sahne: `k` rozet, `t` başlık (<b> yeşil vurgu, <br>), `s` alt sat�
 - Kişi fotoğrafı: o kişinin o makamda OLDUĞUNU önce iki kaynakla doğrula (ör. Fed Başkanı, TCMB Başkanı). Emin değilsen kişi fotoğrafı koyma.
 - Büyük fotoğrafı PIL ile küçült (arka plan 1400px, kişi kare 600px).
 Hazır doğrulanmış görseller (25 Ekim 2026): Fed binası "File:Eccles Building (26088200676).jpg" (PD), Fed Başkanı Kevin Warsh "File:Federal Reserve Chair Kevin Warsh delivers remarks at his swearing-in ceremony in the East Room of the White House, Friday, May 22, 2026. (Cropped).jpg" (PD).
+
+## Görsel yoğunluğu (Kadir Bey isteği, 25 Ekim 2026)
+Sahnelerin ÇOĞUNDA gerçek fotoğraf olsun (`photo` alanı; `person` ve `flag` isteğe bağlı). Öneriler: dolar sahnesi → ABD doları banknot fotoğrafı; euro → euro banknotları veya AB bayrağı; altın → altın külçe/çeyrek altın fotoğrafı; Bitcoin → fiziksel Bitcoin madeni para fotoğrafı; akaryakıt → akaryakıt pompası/istasyon; kanca sahnesi → İstanbul/borsa/para fotoğrafı; haberler → kurum binası + kurum başkanı + bayrak. Kapanış sahnesi fotoğrafsız kalabilir. Commons lisans kuralları aynen geçerli; uygun lisanslı fotoğraf bulunamazsa o sahne fotoğrafsız kalır.
+
+## Kapanış (KISA, ~4 sn)
+k "DÖVİZ RADAR", t "Canlı kurlar:<br><b>dovizradar.com</b>", s "Bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.", n "Güncel kurlar Döviz Radar nokta kom'da. Abone olmayı unutmayın!"
