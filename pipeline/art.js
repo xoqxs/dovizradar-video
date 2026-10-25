@@ -1,0 +1,11 @@
+// Kendi çizimimiz olan SVG görseller (telifsiz)
+const stripes=[...Array(13)].map((_,i)=>`<rect y="${i*20}" width="494" height="20" fill="${i%2?'#fff':'#b22234'}"/>`).join('');
+const stars=[...Array(9)].map((_,r)=>[...Array(r%2?5:6)].map((_,c)=>`<circle cx="${(r%2?33:16.5)+c*33}" cy="${12+r*14}" r="4.6" fill="#fff"/>`).join('')).join('');
+const us=`<svg viewBox="0 0 494 260" width="420" style="border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.4)">${stripes}<rect width="198" height="140" fill="#3c3b6e"/>${stars}</svg>`;
+const tr=`<svg viewBox="0 0 300 200" width="360" style="border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.4)"><rect width="300" height="200" fill="#e30a17"/><circle cx="106" cy="100" r="50" fill="#fff"/><circle cx="118.5" cy="100" r="40" fill="#e30a17"/><polygon fill="#fff" points="168,100 192.5,108 177.4,87.2 177.4,112.8 192.5,92"/></svg>`;
+const bank=(label)=>`<svg viewBox="0 0 300 220" width="330"><polygon points="150,10 290,70 10,70" fill="#e5e7eb"/><rect x="20" y="70" width="260" height="14" fill="#cbd5e1"/>${[0,1,2,3,4,5].map(i=>`<rect x="${34+i*44}" y="90" width="20" height="90" fill="#f1f5f9"/>`).join('')}<rect x="10" y="180" width="280" height="16" fill="#cbd5e1"/><rect x="0" y="196" width="300" height="14" fill="#94a3b8"/><text x="150" y="58" text-anchor="middle" font-size="22" font-weight="800" fill="#0a2347" font-family="Inter">${label}</text></svg>`;
+const pump=`<svg viewBox="0 0 200 220" width="240"><rect x="30" y="20" width="100" height="180" rx="14" fill="#e5e7eb"/><rect x="45" y="38" width="70" height="46" rx="6" fill="#0a2347"/><text x="80" y="70" text-anchor="middle" font-size="24" font-weight="800" fill="#4ade80" font-family="Inter">₺</text><rect x="20" y="196" width="120" height="14" rx="4" fill="#94a3b8"/><path d="M130 70 h22 a14 14 0 0 1 14 14 v70 a10 10 0 0 0 20 0 v-60 l-16 -16" fill="none" stroke="#e5e7eb" stroke-width="10" stroke-linecap="round"/></svg>`;
+module.exports={us,tr,bank,pump,
+ art(k){ if(k==='fed') return `<div style="display:flex;align-items:flex-end;gap:40px">${bank('FED')}${us}</div>`;
+  if(k==='tcmb') return `<div style="display:flex;align-items:flex-end;gap:40px">${bank('TCMB')}${tr}</div>`;
+  if(k==='us') return us; if(k==='tr') return tr; if(k==='pump') return pump; return '';}};
