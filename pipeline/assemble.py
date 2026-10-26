@@ -13,6 +13,6 @@ run(['ffmpeg','-y','-loglevel','error','-f','concat','-safe','0','-i','a.txt','-
 D=subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','v.mp4'],capture_output=True,text=True).stdout.strip()
 run(['python3','music.py',D,'m.wav'])
 run(['ffmpeg','-y','-loglevel','error','-i','voice.wav','-af','loudnorm=I=-16:TP=-1.5','-ar','44100','-ac','1','voiceN.wav'])
-run(['ffmpeg','-y','-loglevel','error','-i','voiceN.wav','-i','m.wav','-filter_complex','[1:a]volume=0.20[m];[0:a][m]amix=inputs=2:duration=longest:normalize=0,apad[a]','-map','[a]','-t',D,'-ar','44100','mix.wav'])
+run(['ffmpeg','-y','-loglevel','error','-i','voiceN.wav','-i','m.wav','-filter_complex','[1:a]volume=0.30[m];[0:a][m]amix=inputs=2:duration=longest:normalize=0,apad[a]','-map','[a]','-t',D,'-ar','44100','mix.wav'])
 run(['ffmpeg','-y','-loglevel','error','-i','v.mp4','-i','mix.wav','-map','0:v','-map','1:a','-c:v','copy','-c:a','aac','-b:a','160k','-t',D,out])
 print(out,D)

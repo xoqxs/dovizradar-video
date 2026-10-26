@@ -13,7 +13,7 @@ Liste; her sahne: `k` rozet, `t` başlık (<b> yeşil vurgu, <br>), `s` alt sat�
 ## Komutlar
 1. `python3 tts.py tr-TR-AhmetNeural` (prosody +15%, sahne arası 0,15 sn) → n*.wav, scenes_d.json
 2. `node make.js` → s*.png (kontrol: en az 2 PNG'yi Read ile aç, taşma var mı)
-3. `python3 assemble.py CIKTI.mp4` (müzik 0.20, son cümle sonrası 1,2 sn)
+3. `python3 assemble.py CIKTI.mp4` (müzik 0.30, son cümle sonrası 1,2 sn)
 
 ## Fotoğraf (Wikimedia Commons, wm.py)
 - `python3 wm.py s "arama"` → dosya adları; `python3 wm.py i "File:..." img/ad.jpg` → lisans + indirme.
