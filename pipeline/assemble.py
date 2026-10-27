@@ -2,9 +2,18 @@ import json,subprocess,sys
 out=sys.argv[1]; tail=1.2
 sc=json.load(open('scenes_d.json')); sc[-1]['d']=round(sc[-1]['d']+tail,2); L=open('l.txt','w'); A=open('a.txt','w')
 run=lambda a:subprocess.run(a,check=True)
+import os,datetime,hashlib
+# Her sahnede farklı kamera hareketi; sıra her videoda farklı başlar
+MOVES=["zoompan=z='min(zoom+0.0005,1.05)'",
+ "zoompan=z='if(eq(on,0),1.06,max(zoom-0.0005,1.0))':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'",
+ "zoompan=z='1.05':x='(iw-iw/zoom)*on/{fr}':y='ih/2-(ih/zoom/2)'",
+ "zoompan=z='1.05':x='(iw-iw/zoom)*(1-on/{fr})':y='ih/2-(ih/zoom/2)'",
+ "zoompan=z='min(zoom+0.0004,1.05)':x='iw/2-(iw/zoom/2)':y='0'"]
+OFF=int(hashlib.md5((os.environ.get('VSEED') or datetime.datetime.now().strftime('%Y%m%d%H%M')).encode()).hexdigest()[:4],16)
 for i,x in enumerate(sc):
     d=x['d']
-    run(['ffmpeg','-y','-loglevel','error','-loop','1','-i',f's{i}.png','-t',str(d),'-vf',f"scale=1188:2112,zoompan=z='min(zoom+0.0005,1.05)':d={int(d*25)+5}:s=1080x1920:fps=25,fade=t=in:st=0:d=0.12,fade=t=out:st={d-0.12}:d=0.12,format=yuv420p",'-c:v','libx264','-preset','veryfast','-crf','20',f'c{i}.mp4'])
+    fr=int(d*25)+5; mv=MOVES[(i+OFF)%len(MOVES)].format(fr=fr)
+    run(['ffmpeg','-y','-loglevel','error','-loop','1','-i',f's{i}.png','-t',str(d),'-vf',f"scale=1188:2112,{mv}:d={fr}:s=1080x1920:fps=25,fade=t=in:st=0:d=0.12,fade=t=out:st={d-0.12}:d=0.12,format=yuv420p",'-c:v','libx264','-preset','veryfast','-crf','20',f'c{i}.mp4'])
     run(['ffmpeg','-y','-loglevel','error','-i',f'n{i}.wav','-af','adelay=60|60,apad','-t',str(d),'-ar','44100','-ac','1',f'p{i}.wav'])
     L.write(f"file 'c{i}.mp4'\n"); A.write(f"file 'p{i}.wav'\n")
 L.close(); A.close()

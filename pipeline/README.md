@@ -35,3 +35,21 @@ Zamanlanmış görevlerde WebFetch adres onayı isteyip başarısız olur. Sıra
 Adresler: https://open.er-api.com/v6/latest/USD · https://api.gold-api.com/price/XAU · https://api.coinbase.com/v2/prices/BTC-USD/spot · (haftalık) https://api.frankfurter.dev/v1/<baş>..<bit>?base=USD&symbols=TRY,EUR , https://api.coinbase.com/v2/prices/BTC-USD/spot?date=YYYY-MM-DD
 Haberler: WebSearch serbest; haber sayfasını açman gerekirse yine tarayıcıda navigate + get_page_text kullan (WebFetch değil). Her haber iki bağımsız kaynakla doğrulanır.
 Azure TTS (eastus.tts.speech.microsoft.com) ve Wikimedia kabuktan çalışır.
+
+## ÖZGÜNLÜK VE KALİTE (Kadir Bey isteği, 27 Ekim 2026 — TÜM video görevleri için zorunlu)
+Amaç: her video elle hazırlanmış gibi farklı ve kaliteli olsun; YouTube'un "tekrarlayan/şablon içerik" algısına düşmesin.
+**Bol ve her seferinde farklı görsel**
+- Kapanış hariç HER sahnede en az bir gerçek fotoğraf; sahnelerin en az yarısında ikinci fotoğraf (`photo2`, çerçeveli küçük görsel). Bir videoda aynı fotoğraf iki kez kullanılmaz.
+- `pipeline/kullanilan-gorseller.txt` son 120 görselin kaydıdır. `python3 wm.py s "arama" 15` kullanılmışları "[KULLANILDI]" diye işaretler; `wm.py i` kullanılmış görseli indirmeyi reddeder ("TEKRAR"). Daima kullanılmamış görsel seç; aramayı çeşitlendir (farklı açı, farklı nesne: ör. altın için külçe, çeyrek altın, kuyumcu vitrini, bilezik, altın madeni, Kapalıçarşı). Yalnızca kurum binası/kurum başkanı gibi haber için zorunlu ve alternatifi olmayan görselde `TEKRAR=1` serbesttir (önce aynı kişinin/binanın başka fotoğrafını ara).
+- Video bitince kullanilan-gorseller.txt'yi de commit et (wm.py indirirken otomatik yazar).
+**Görünüm her videoda farklı**
+- make.js her videoda farklı renk teması seçer; assemble.py sahne başına farklı kamera hareketi; music.py her videoda farklı tempo/ton/akor dizisi üretir (tohum: tarih-saat; elle `VSEED` verme).
+- En az 1–2 sahnede `"layout":"full"` (tam ekran fotoğraf) kullan; düzenleri karıştır (full, üst fotoğraf, fotoğraf+photo2, kişi, çizim).
+**Metin her seferinde yeni**
+- Kanca cümlesi, sahne sırası, rozet (`k`) metinleri ve seslendirme her videoda yeniden yazılır; önceki videolarda kullanılan kalıp cümleleri tekrar etme (kapanış hariç). Rakamları sadece okumak yerine kısa bir yorum/bağlam ver ("geçen haftaya göre", "bunun anlamı şu"), soru sor, merak uyandır.
+- Başlık kalıbını da çeşitlendir (her gün aynı başlık yapısı olmasın); son 5 videonun başlığına YouTube Studio içerik listesinden bak ve benzemesin.
+- İlk 2 saniye çok önemli: kanca sahnesi tam ekran çarpıcı fotoğraf + kısa, merak uyandıran soru.
+**Kalite kontrol (yüklemeden önce)**
+- Tüm PNG'lere bak (Read): metin taşması, okunmayan yazı, kötü kırpılmış fotoğraf yok. Sorun varsa düzelt ve yeniden üret.
+- Seslendirmede sayıların doğru okunduğunu ve son cümlenin kesilmediğini kontrol et (son sahne süresi + 1,2 sn kuyruk).
+- Kendine sor: "Bu video dünkü videonun aynısı gibi mi görünüyor?" Evetse fotoğrafları/kancayı/düzeni değiştir.
