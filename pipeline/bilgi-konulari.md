@@ -7,7 +7,7 @@ Rakam veren her konu üretim günü iki kaynakla doğrulanır; değişebilen rak
 
 | Durum | Konu (videonun sorusu) | Sitedeki sayfa |
 |---|---|---|
-| [ ] | Çeyrek altın kaç gram, kaç ayar? | /p/ceyrek-altin-fiyati.html |
+| [x] 2026-10-27 | Çeyrek altın kaç gram, kaç ayar? | /p/ceyrek-altin-fiyati.html |
 | [ ] | Gram altın fiyatı nasıl hesaplanır? (ons × dolar ÷ 31,1) | /p/altin-hesaplama.html |
 | [ ] | Kira artışı nasıl hesaplanır? (TÜFE 12 aylık ortalama) | /p/kira-artis-hesaplama.html |
 | [ ] | Enflasyon paranı nasıl eritir? (10 yıl önceki 1.000 TL bugün) | /p/enflasyon-hesaplama.html |
