@@ -38,4 +38,4 @@ if __name__=="__main__":
             raise SystemExit("TEKRAR: bu gorsel son videolarda kullanildi, baska gorsel sec ("+sys.argv[2]+")")
         i=info(sys.argv[2]); print(json.dumps(i,ensure_ascii=False))
         if len(sys.argv)>3:
-            subprocess.run(["curl","-s","-m","40","-A",UA,"-o",sys.argv[3],i['url']]); mark(sys.argv[2])
+            subprocess.run(["curl","-sL","-m","60","-A",UA,"-o",sys.argv[3],"https://commons.wikimedia.org/w/thumb.php?"+urllib.parse.urlencode({"w":1400,"f":sys.argv[2].split(":",1)[1]})]); mark(sys.argv[2])  # upload.wikimedia.org 429 veriyor; thumb.php calisiyor (27.10.2026)
