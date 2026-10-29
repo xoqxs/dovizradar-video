@@ -4,3 +4,4 @@ Her yayından sonra bir satır ekle. Alanlar: tarih | tür (piyasa/uzun/bilgi) |
 | Tarih | Tür | Başlık | Açı | Biçim | Kanca | Anahtar kelime | Tema | Liste |
 |---|---|---|---|---|---|---|---|---|
 | 2026-10-27 | bilgi | Çeyrek Altın Kaç Gram, Kaç Ayar? Kısa ve Net Cevap | çeyrek altının gramı ve saflığı | f | "Bir çeyrek altın kaç gram?" | çeyrek altın kaç gram | ? | – |
+| 2026-10-29 | piyasa | Fed Faiz Kararı Sonrası Dolar ve Altın: Bir Haftada Ne Değişti? | Fed faizi sabit tuttu; dolar/altın/BTC geçen haftayla kıyas | c | "Fed faizi sabit tuttu. Bir haftada cebinizde ne değişti?" | fed faiz kararı | ? | Günlük Piyasa Özeti |
