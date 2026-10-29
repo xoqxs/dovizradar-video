@@ -11,7 +11,7 @@ Liste; her sahne: `k` rozet, `t` başlık (<b> yeşil vurgu, <br>), `s` alt sat�
 - ya da `img`: "fed" | "tcmb" | "us" | "tr" | "pump" (kendi çizimimiz)
 
 ## Komutlar
-1. `python3 tts.py tr-TR-AhmetNeural` (prosody +15%, sahne arası 0,15 sn) → n*.wav, scenes_d.json
+1. `python3 tts.py tr-TR-AhmetNeural` (prosody +22%, baş/son sessizlik kırpılır, sahne arası ~0,08 sn) → n*.wav, scenes_d.json
 2. `node make.js` → s*.png (kontrol: en az 2 PNG'yi Read ile aç, taşma var mı)
 3. `python3 assemble.py CIKTI.mp4` (müzik 0.30, son cümle sonrası 1,2 sn)
 
@@ -65,3 +65,11 @@ Amaç: her video aramada bulunsun (YouTube SEO) ve kanal "otomatik/tekrarlayan i
 **6) Dil ve kategori:** Video dili Türkçe, kategori "Eğitim" (bilgi videoları) veya "Haberler ve Politika"/"Kişiler ve Bloglar" yerine uygun olan; bulunamazsa varsayılan bırak.
 **7) Spam sinyalleri – YAPMA:** Aynı gün aynı türden 2 video; başka kanalların videosunu/ses/müziğini kullanmak; açıklamaya alakasız bağlantı veya çok sayıda bağlantı (en fazla 2 site bağlantısı); yorumlara otomatik yorum/beğeni; abone olun ricasını 1'den fazla tekrar etmek; aynı seslendirme cümlesini her videoda kullanmak (kapanış cümlesini de 4–5 farklı varyant arasından döndür: ör. "Güncel kurlar Döviz Radar nokta kom'da. Abone olmayı unutmayın!", "Hesaplama araçları Döviz Radar nokta kom'da, kanala abone olun.", "Detaylar ve canlı kurlar Döviz Radar nokta kom'da.", "Kendi hesabınızı Döviz Radar nokta kom'da yapın; görüşmek üzere.").
 **8) Son kontrol (yüklemeden önce kendine sor):** "Bu başlık/açıklama/kanca son 15 videodan birine benziyor mu?" Evetse değiştir. "Biri bu videoyu izleyince yeni ne öğreniyor?" Cevap yoksa açıyı güçlendir.
+
+
+## TEMPO VE GÖRSEL YOĞUNLUK (Kadir Bey 29 Ekim 2026 – ZORUNLU)
+Kadir Bey: "Video biraz sıkıcı; daha kalabalık, resimlerle pekiştiren, seri ve duraksamasız olsun; kısa sürede hemen dinlenmeli."
+1. GÖRÜNTÜ 2–3 SANİYEDE BİR DEĞİŞİR: Seslendirmesi 3 sn'den uzun her sahneye `shots` ekle (aynı metin, farklı görsel): 3–5 sn → 1 ek çekim, 5–8 sn → 2 ek çekim. Örnek: `"photo":"img/dolar.jpg","shots":[{"photo":"img/fed.jpg","layout":"full"},{"img":"us"}]`. Süre çekimlere eşit bölünür, her çekimde farklı kamera hareketi olur. Ek çekimde mümkünse sözü edilen şeyin kendisi (kurum binası, banknot, külçe, pompa, bayrak, kişi). Fotoğraf yetmezse (Wikimedia 429 dahil) art.js çizimleri (`img`: fed, tcmb, us, tr, pump) ve `flag` kullan; aynı görsel bir videoda iki kez kullanılmaz.
+2. SERİ SESLENDİRME: Cümleler kısa (en fazla ~12 kelime), dolgu yok ("evet arkadaşlar", "şimdi gelelim", "bildiğiniz gibi" YOK). Her sahne tek fikir. Kanca ilk sahnede, ilk cümle en geç 1. saniyede başlar. Rakamdan hemen sonra 3–6 kelimelik anlam ("geçen haftadan yüksek", "bu da kiraya yansır").
+3. SÜRE: kısa videolar 22–35 sn (önceki 25–40 yerine hedef 30 sn altı), uzun özet 55–80 sn. Uzarsa sahne birleştir/kısalt, konu ekleme.
+4. KONTROL: Üretimden sonra 1., 3., 5. … saniyelerden kare al: art arda iki karede aynı görüntü 4 sn'yi geçmemeli; sesler arasında 0,3 sn'den uzun boşluk olmamalı (ffmpeg silencedetect=noise=-40dB:d=0.3 ile kontrol; çıkarsa tts metnini düzelt).

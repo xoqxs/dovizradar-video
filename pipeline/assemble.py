@@ -1,5 +1,5 @@
 import json,subprocess,sys
-out=sys.argv[1]; tail=1.2
+out=sys.argv[1]; tail=1.0
 sc=json.load(open('scenes_d.json')); sc[-1]['d']=round(sc[-1]['d']+tail,2); L=open('l.txt','w'); A=open('a.txt','w')
 run=lambda a:subprocess.run(a,check=True)
 import os,datetime,hashlib
@@ -12,9 +12,21 @@ MOVES=["zoompan=z='min(zoom+0.0005,1.05)'",
 OFF=int(hashlib.md5((os.environ.get('VSEED') or datetime.datetime.now().strftime('%Y%m%d%H%M')).encode()).hexdigest()[:4],16)
 for i,x in enumerate(sc):
     d=x['d']
-    fr=int(d*25)+5; mv=MOVES[(i+OFF)%len(MOVES)].format(fr=fr)
-    run(['ffmpeg','-y','-loglevel','error','-loop','1','-i',f's{i}.png','-t',str(d),'-vf',f"scale=1188:2112,{mv}:d={fr}:s=1080x1920:fps=25,fade=t=in:st=0:d=0.12,fade=t=out:st={d-0.12}:d=0.12,format=yuv420p",'-c:v','libx264','-preset','veryfast','-crf','20',f'c{i}.mp4'])
-    run(['ffmpeg','-y','-loglevel','error','-i',f'n{i}.wav','-af','adelay=60|60,apad','-t',str(d),'-ar','44100','-ac','1',f'p{i}.wav'])
+    # Sahnede birden fazla görsel (shots) varsa süre eşit bölünür: görüntü 2-3 sn'de bir değişir
+    shots=[f's{i}.png']+sorted(f for f in os.listdir('.') if f.startswith(f's{i}_') and f.endswith('.png'))
+    sd=round(d/len(shots),3); parts=[]
+    for j,img in enumerate(shots):
+        dj=sd if j<len(shots)-1 else round(d-sd*(len(shots)-1),3)
+        fr=int(dj*25)+5; mv=MOVES[(i*3+j+OFF)%len(MOVES)].format(fr=fr)
+        fi='fade=t=in:st=0:d=0.08,' if j==0 else ''
+        fo=f',fade=t=out:st={dj-0.08}:d=0.08' if j==len(shots)-1 else ''
+        run(['ffmpeg','-y','-loglevel','error','-loop','1','-i',img,'-t',str(dj),'-vf',f"scale=1188:2112,{mv}:d={fr}:s=1080x1920:fps=25,{fi}format=yuv420p{fo}",'-c:v','libx264','-preset','veryfast','-crf','20',f'c{i}_{j}.mp4'])
+        parts.append(f'c{i}_{j}.mp4')
+    if len(parts)==1: os.replace(parts[0],f'c{i}.mp4')
+    else:
+        open(f'cl{i}.txt','w').write(''.join(f"file '{q}'\n" for q in parts))
+        run(['ffmpeg','-y','-loglevel','error','-f','concat','-safe','0','-i',f'cl{i}.txt','-c','copy',f'c{i}.mp4'])
+    run(['ffmpeg','-y','-loglevel','error','-i',f'n{i}.wav','-af','apad','-t',str(d),'-ar','44100','-ac','1',f'p{i}.wav'])
     L.write(f"file 'c{i}.mp4'\n"); A.write(f"file 'p{i}.wav'\n")
 L.close(); A.close()
 run(['ffmpeg','-y','-loglevel','error','-f','concat','-safe','0','-i','l.txt','-c','copy','v.mp4'])

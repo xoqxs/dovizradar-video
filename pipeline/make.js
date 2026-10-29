@@ -1,6 +1,7 @@
 // Sahne PNG'leri. Tema her videoda değişir (THEME=0..5 ile sabitlenebilir).
 // Sahne alanları: k,t,s,c,n + isteğe bağlı photo (üst fotoğraf), photo2 (küçük ikinci fotoğraf, çerçeveli),
 // layout:"full" (fotoğraf tam ekran, metin altta), person{img,name}, flag "us"|"tr", img (çizim).
+// shots:[{photo,photo2,img,person,flag,layout},...] aynı metinle ek görüntüler; süre eşit bölünür (s{i}_1.png …).
 const {chromium}=require('playwright');const fs=require('fs');const crypto=require('crypto');const sc=require('./scenes_d.json');const A=require('./art.js');
 const du=f=>'data:image/jpeg;base64,'+fs.readFileSync(f).toString('base64');
 const lg='data:image/png;base64,'+fs.readFileSync('logo.png').toString('base64');
@@ -14,7 +15,7 @@ const seed=process.env.VSEED||new Date().toISOString().slice(0,16);
 const T=TH[process.env.THEME!==undefined?+process.env.THEME:parseInt(crypto.createHash('md5').update(seed).digest('hex').slice(0,4),16)%TH.length];
 const hx=h=>{const n=parseInt(h.slice(1),16);return `${n>>16&255},${n>>8&255},${n&255}`};
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1920}});
-for(let i=0;i<sc.length;i++){const x=sc[i];let top='';let pad='90px';let jc='center';
+const R=async(x,i,file)=>{let top='';let pad='90px';let jc='center';
  if(x.photo&&x.layout==='full'){top=`<div style="position:absolute;inset:0;background:url(${du(x.photo)}) center/cover"></div><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.05) 25%,rgba(${hx(T.base)},.55) 55%,${T.base} 82%)"></div>`;pad='0 90px 230px';jc='flex-end';}
  else if(x.photo){top=`<div style="position:absolute;top:0;left:0;right:0;height:900px;background:url(${du(x.photo)}) center/cover"></div><div style="position:absolute;top:0;left:0;right:0;height:900px;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 30%,rgba(${hx(T.base)},.2) 60%,${T.base} 100%)"></div>`;pad='980px 90px 0';}
  else if(x.img){top=`<div style="position:absolute;top:330px;left:90px;right:90px">${A.art(x.img)}</div>`;pad='560px 90px 0';}
@@ -22,4 +23,8 @@ for(let i=0;i<sc.length;i++){const x=sc[i];let top='';let pad='90px';let jc='cen
  if(x.person) top+=`<div style="position:absolute;top:640px;left:90px;display:flex;align-items:center;gap:28px"><img src="${du(x.person.img)}" style="width:250px;height:250px;border-radius:50%;object-fit:cover;border:6px solid ${T.ac};box-shadow:0 10px 40px rgba(0,0,0,.5)"><div style="font-size:40px;font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.6)">${x.person.name}</div></div>`;
  if(x.flag) top+=`<div style="position:absolute;top:250px;right:90px;transform:scale(.55);transform-origin:top right">${A.art(x.flag)}</div>`;
 await p.setContent(`<body style="margin:0;width:1080px;height:1920px;background:${T.bg};font-family:Inter,sans-serif;color:#fff;display:flex;flex-direction:column;justify-content:${jc};padding:${pad};box-sizing:border-box;position:relative">${top}<div style="position:absolute;top:100px;left:90px;display:flex;align-items:center;gap:24px"><img src="${lg}" style="width:96px;height:96px;border-radius:50%"><span style="font-size:46px;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.6)">Döviz Radar</span></div><div style="position:relative;display:inline-block;align-self:flex-start;background:${x.c};color:#08233a;font-weight:800;font-size:40px;padding:14px 32px;border-radius:999px;margin-bottom:44px">${x.k}</div><div style="position:relative;font-size:100px;line-height:1.12;font-weight:500;text-shadow:0 3px 14px rgba(0,0,0,.45)">${x.t.replace(/<b>/g,`<b style="font-weight:900;color:${T.ac}">`)}</div><div style="position:relative;font-size:44px;margin-top:40px;opacity:.9;line-height:1.35;text-shadow:0 2px 10px rgba(0,0,0,.5)">${x.s}</div><div style="position:absolute;bottom:140px;left:90px;right:90px;height:8px;background:rgba(255,255,255,.15);border-radius:4px"><div style="width:${Math.round((i+1)/sc.length*100)}%;height:100%;background:${T.ac};border-radius:4px"></div></div></body>`);
-await p.screenshot({path:`s${i}.png`});}await b.close();console.log('tema',TH.indexOf(T));})();
+await p.screenshot({path:file});};
+const VIS=['photo','photo2','img','person','flag','layout'];
+for(let i=0;i<sc.length;i++){const x=sc[i];await R(x,i,`s${i}.png`);
+for(let j=0;j<(x.shots||[]).length;j++){const y={...x};VIS.forEach(k=>delete y[k]);Object.assign(y,x.shots[j]);await R(y,i,`s${i}_${j+1}.png`);}}
+await b.close();console.log('tema',TH.indexOf(T));})();
