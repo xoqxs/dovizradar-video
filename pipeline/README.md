@@ -73,3 +73,8 @@ Kadir Bey: "Video biraz sıkıcı; daha kalabalık, resimlerle pekiştiren, seri
 2. SERİ SESLENDİRME: Cümleler kısa (en fazla ~12 kelime), dolgu yok ("evet arkadaşlar", "şimdi gelelim", "bildiğiniz gibi" YOK). Her sahne tek fikir. Kanca ilk sahnede, ilk cümle en geç 1. saniyede başlar. Rakamdan hemen sonra 3–6 kelimelik anlam ("geçen haftadan yüksek", "bu da kiraya yansır").
 3. SÜRE: kısa videolar 22–35 sn (önceki 25–40 yerine hedef 30 sn altı), uzun özet 55–80 sn. Uzarsa sahne birleştir/kısalt, konu ekleme.
 4. KONTROL: Üretimden sonra 1., 3., 5. … saniyelerden kare al: art arda iki karede aynı görüntü 4 sn'yi geçmemeli; sesler arasında 0,3 sn'den uzun boşluk olmamalı (ffmpeg silencedetect=noise=-40dB:d=0.3 ile kontrol; çıkarsa tts metnini düzelt).
+
+## WHATSAPP KANALI (Kadir Bey 30 Ekim 2026)
+Her video açıklamasında, araç bağlantı satır(lar)ının hemen altına şu satırı ekle:
+"📲 Her sabah dolar, euro ve altın WhatsApp'ta: https://whatsapp.com/channel/0029VbELxiCEAKWICpxFX21R"
+TikTok/Instagram için hazırlanan açıklamalarda da "Profildeki bağlantıdan WhatsApp kanalımıza katılın" cümlesine yer ver.
