@@ -18,7 +18,8 @@ for i,x in enumerate(sc):
     for j,img in enumerate(shots):
         dj=sd if j<len(shots)-1 else round(d-sd*(len(shots)-1),3)
         fr=int(dj*25)+5; mv=MOVES[(i*3+j+OFF)%len(MOVES)].format(fr=fr)
-        fi='fade=t=in:st=0:d=0.08,' if j==0 else ''
+        # İlk sahnenin ilk karesi SİYAH OLMAMALI: TikTok/YouTube kapağı ilk kareden alır (Kadir Bey 31 Ekim 2026)
+        fi='fade=t=in:st=0:d=0.08,' if (j==0 and i>0) else ''
         fo=f',fade=t=out:st={dj-0.08}:d=0.08' if j==len(shots)-1 else ''
         run(['ffmpeg','-y','-loglevel','error','-loop','1','-i',img,'-t',str(dj),'-vf',f"scale=1188:2112,{mv}:d={fr}:s=1080x1920:fps=25,{fi}format=yuv420p{fo}",'-c:v','libx264','-preset','veryfast','-crf','20',f'c{i}_{j}.mp4'])
         parts.append(f'c{i}_{j}.mp4')
