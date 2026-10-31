@@ -6,6 +6,7 @@ Seçim sırası: (1) o günün TikTok arama önerileri + doğrulanmış gündem,
 ## Slot kuralı (Kadir Bey 31 Ekim 2026)
 - ÖĞLE (günün ilk videosu) = HER GÜN güncel dolar, euro, gram/çeyrek altın (+ons/gümüş/BTC) özeti, günlük % değişimle, tarih-saatle. 14 günlük tekrar kuralı bu slota uygulanmaz; kanca/görsel/sıra her gün farklı.
 - AKŞAM = gündem sorusu, GECE = "nasıl?" rehberi (havuzdan).
+- HAVUZ OTOMATİK DOLAR: Her akşam/gece çalışmasında, aşağıdaki havuzda işaretlenmemiş ([ ]) madde sayısı 6'dan azsa, o günün TikTok arama önerilerinden (para konulu, "nasıl / ne kadar / ne olur / nedir" içeren) 6 yeni madde ekle: soru + doğrulanacak resmi kaynak + ilgili dovizradar.com aracı (sayfa canlıysa). Son 14 günde işlenmiş veya havuzda zaten olan konuyu ekleme. Tahmin gerektiren konu ("dolar yükselecek mi" gibi) yalnızca olgu anlatılabiliyorsa eklenir.
 
 ## Tohum anahtar kelimeler (öneri listesi için)
 altın, gram altın, çeyrek altın, cumhuriyet altını, altın yükselecek mi, altın alınır mı, dolar, dolar kaç tl, dolar yükselecek mi, euro, gümüş, bitcoin,
