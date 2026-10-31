@@ -3,6 +3,10 @@ Kural: Her video, Türklerin TikTok'ta GERÇEKTEN arattığı bir para sorusuna 
 Seçim sırası: (1) o günün TikTok arama önerileri + doğrulanmış gündem, (2) aşağıdaki havuz. Son 14 günde (tiktok-gunlugu.md) işlenen konu tekrar edilmez.
 "yükselecek mi / alınır mı" aramaları: başlıkta kullanılabilir ama içerikte TAHMİN ve AL-SAT tavsiyesi YOK; yalnızca o günü etkileyen doğrulanmış olgular + "yatırım tavsiyesi değildir".
 
+## Slot kuralı (Kadir Bey 31 Ekim 2026)
+- ÖĞLE (günün ilk videosu) = HER GÜN güncel dolar, euro, gram/çeyrek altın (+ons/gümüş/BTC) özeti, günlük % değişimle, tarih-saatle. 14 günlük tekrar kuralı bu slota uygulanmaz; kanca/görsel/sıra her gün farklı.
+- AKŞAM = gündem sorusu, GECE = "nasıl?" rehberi (havuzdan).
+
 ## Tohum anahtar kelimeler (öneri listesi için)
 altın, gram altın, çeyrek altın, cumhuriyet altını, altın yükselecek mi, altın alınır mı, dolar, dolar kaç tl, dolar yükselecek mi, euro, gümüş, bitcoin,
 emekli, emekli zammı, emekli maaşı, emekli promosyonu, memur zammı, asgari ücret, ocak zammı, enflasyon, kira artışı, kira zammı,
