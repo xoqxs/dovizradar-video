@@ -11,7 +11,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 ## Havuz (31 Ekim 2026 arama önerilerinden; [x] = işlendi)
 - [ ] Çeyrek altın sahte olduğu nasıl anlaşılır? (1,754 g, 22 ayar, 18 mm – doviz.com bilgi sayfası; 2. kaynakla doğrula) → /p/altin-hesaplama.html
 - [ ] Memur zammı Ocak 2027 nasıl hesaplanır? (toplu sözleşme oranı + enflasyon farkı; açıklanmış aylık TÜFE'lerle) → /p/brutten-nete-maas-hesaplama.html
-- [ ] Emekli zammı Ocak 2027: şimdiye kadar birikmiş oran (Temmuz–Ekim TÜFE) → /p/emekli-zammi-hesaplama.html (canlı mı kontrol et)
+- [x] 2026-10-31 Emekli zammı Ocak 2027: şimdiye kadar birikmiş oran (Temmuz–Ekim TÜFE) → /p/emekli-zammi-hesaplama.html (canlı mı kontrol et)
 - [ ] Kredi kartı borcu ödenmezse ne olur? (asgari ödeme, gecikme faizi – TCMB azami oran, yasal takip süreci) → /p/kredi-hesaplama.html veya ilgili araç
 - [ ] Mevduat faizi nasıl hesaplanır? 100 bin TL 32 günde ne getirir? (güncel oran aralığı + stopaj) → /p/mevduat-faizi-hesaplama.html
 - [ ] Kredi notu nasıl yükselir? (KKB/Findeks, resmi kaynak)
