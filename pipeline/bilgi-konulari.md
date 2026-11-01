@@ -12,7 +12,7 @@ Rakam veren her konu üretim günü iki kaynakla doğrulanır; değişebilen rak
 | [x] 2026-10-31 https://youtube.com/shorts/3xFaNYJmNk4 | Kira artışı nasıl hesaplanır? (TÜFE 12 aylık ortalama) | /p/kira-artis-hesaplama.html |
 | [ ] | Enflasyon paranı nasıl eritir? (10 yıl önceki 1.000 TL bugün) | /p/enflasyon-hesaplama.html |
 | [ ] | Brütten nete maaş nasıl hesaplanır? | /p/brutten-nete-maas-hesaplama.html |
-| [ ] | Kıdem tazminatı kimlere, nasıl ödenir? | /p/kidem-tazminati-hesaplama.html |
+| [x] 2026-11-01 | Kıdem tazminatı kimlere, nasıl ödenir? | /p/kidem-tazminati-hesaplama.html |
 | [ ] | Ons altın nedir, neden dolarla fiyatlanır? | /p/ons-altin-fiyati.html |
 | [ ] | 22 ayar bilezik ile gram altın farkı | /p/22-ayar-bilezik-fiyati.html |
 | [ ] | Mevduat faizi getirisi nasıl hesaplanır? (stopaj dahil) | /p/mevduat-faizi-hesaplama.html |
