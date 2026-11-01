@@ -14,7 +14,7 @@ emekli, emekli zammı, emekli maaşı, emekli promosyonu, memur zammı, asgari �
 kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat faizi, faiz oranları, birikim, para biriktirme, borsa, sgk, vergi iadesi
 
 ## Havuz (31 Ekim 2026 arama önerilerinden; [x] = işlendi)
-- [ ] Çeyrek altın sahte olduğu nasıl anlaşılır? (1,754 g, 22 ayar, 18 mm – doviz.com bilgi sayfası; 2. kaynakla doğrula) → /p/altin-hesaplama.html
+- [x] 2026-11-01 Çeyrek altın sahte olduğu nasıl anlaşılır? (1,754 g, 22 ayar, 18 mm – doviz.com bilgi sayfası; 2. kaynakla doğrula) → /p/altin-hesaplama.html
 - [x] 2026-11-01 Memur zammı Ocak 2027 nasıl hesaplanır? (toplu sözleşme oranı + enflasyon farkı; açıklanmış aylık TÜFE'lerle) → /p/brutten-nete-maas-hesaplama.html
 - [x] 2026-10-31 Emekli zammı Ocak 2027: şimdiye kadar birikmiş oran (Temmuz–Ekim TÜFE) → /p/emekli-zammi-hesaplama.html (canlı mı kontrol et)
 - [x] 2026-10-31 Kredi kartı borcu ödenmezse ne olur? (gece: "kredi kartı asgarisini ödersem ne olur") (asgari ödeme, gecikme faizi – TCMB azami oran, yasal takip süreci) → /p/kredi-hesaplama.html veya ilgili araç
