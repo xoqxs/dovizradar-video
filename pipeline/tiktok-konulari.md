@@ -5,7 +5,8 @@ Seçim sırası: (1) o günün TikTok arama önerileri + doğrulanmış gündem,
 
 ## Slot kuralı (Kadir Bey 31 Ekim 2026)
 - ÖĞLE (günün ilk videosu) = HER GÜN güncel dolar, euro, gram/çeyrek altın (+ons/gümüş/BTC) özeti, günlük % değişimle, tarih-saatle. 14 günlük tekrar kuralı bu slota uygulanmaz; kanca/görsel/sıra her gün farklı.
-- AKŞAM = gündem sorusu, GECE = "nasıl?" rehberi (havuzdan).
+- KAPANIŞ (Kadir Bey 3 Kasım 2026; 1 Kasım öğle fiyat videosu 10 bin izlendi) = hafta içi "Dolar ve altın günü nasıl kapattı?" – gün sonu rakamları ve günlük değişim; cumartesi "Bu hafta dolar ve altın ne kadar değişti?" (haftalık değişim); pazar KAPANIŞ YOK.
+- AKŞAM = gündem sorusu, GECE = "nasıl?" rehberi (havuzdan). Teknik/uzman konuları (PMI, swap, cari açık vb.) TikTok'a KOYMA.
 - HAVUZ OTOMATİK DOLAR: Her akşam/gece çalışmasında, aşağıdaki havuzda işaretlenmemiş ([ ]) madde sayısı 6'dan azsa, o günün TikTok arama önerilerinden (para konulu, "nasıl / ne kadar / ne olur / nedir" içeren) 6 yeni madde ekle: soru + doğrulanacak resmi kaynak + ilgili dovizradar.com aracı (sayfa canlıysa). Son 14 günde işlenmiş veya havuzda zaten olan konuyu ekleme. Tahmin gerektiren konu ("dolar yükselecek mi" gibi) yalnızca olgu anlatılabiliyorsa eklenir.
 
 ## Tohum anahtar kelimeler (öneri listesi için)
