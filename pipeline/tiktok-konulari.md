@@ -22,7 +22,13 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [ ] Kredi notu nasıl yükselir? (KKB/Findeks, resmi kaynak)
 - [ ] Emekli promosyonu en yüksek veren bankalar (Kasım) → /p/emekli-promosyonu.html (sayfa canlıysa)
 - [ ] Kira artışını kim açıklıyor? (TÜİK, ayın 3'ü; Kasım oranı 3 Kasım'da) → /p/kira-artis-hesaplama.html
-- [ ] Asgari ücret 2027 ne zaman açıklanacak? (yalnızca resmi takvim/olgu; rakam tahmini YOK)
+- [x] 2026-11-02 Asgari ücret 2027 ne zaman açıklanacak? (yalnızca resmi takvim/olgu; rakam tahmini YOK)
 - [ ] Enflasyon nedir, maaşını nasıl eritir? (örnek hesap) → /p/enflasyon-hesaplama.html
+- [ ] Kredi borcunu ödemezsem ne olur? (BDDK/banka sözleşmesi, yasal takip süreci) → /p/kredi-hesaplama.html
+- [ ] Kredi kartı yapılandırma nasıl yapılır? (TCMB/BDDK kuralları, güncel azami oran)
+- [ ] Emekli maaşına haciz gelir mi? (5510 sayılı Kanun m.93, resmi metin)
+- [ ] Emekli zammı ne zaman yatar? (SGK ödeme takvimi; yalnızca açıklanmış tarih)
+- [ ] SGK hizmet dökümü nasıl indirilir? (e-Devlet/SGK resmi adımlar)
+- [ ] Vergi iadesi nasıl alınır? (GİB resmi kaynak, kapsam ve başvuru)
 - [x] 2026-10-31 Kira artış oranı Ekim 2026 (bilgi videosu)
 - [x] 2026-10-31 Altın düştü, cepteki altın ne kadar eridi?

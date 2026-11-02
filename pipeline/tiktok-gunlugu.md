@@ -10,3 +10,4 @@
 | 2026-11-01 | tt-2026-11-01-gece.mp4 | gece – Çeyrek altın sahte olduğu nasıl anlaşılır? Darphane ziynet ç | yayınlandı (inceleniyor) |
 | 2026-11-02 | piyasa-2026-11-02.mp4 | Fabrikalar 31 aydır neden yavaşlıyor? 2 Kasım 2026: İSO imal | yayınlandı (inceleniyor) – piyasa görevi (pazartesi) |
 | 2026-11-02 | tt-2026-11-02-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (2 Kasım 2026, 11.40) Do | yayınlandı (inceleniyor) |
+| 2026-11-02 | tt-2026-11-02-aksam.mp4 | akşam – Asgari ücret 2027 ne zaman açıklanacak? 2 Kasım 2026 itiba | yayınlandı (inceleniyor) |
