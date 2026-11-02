@@ -18,7 +18,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [x] 2026-11-01 Memur zammı Ocak 2027 nasıl hesaplanır? (toplu sözleşme oranı + enflasyon farkı; açıklanmış aylık TÜFE'lerle) → /p/brutten-nete-maas-hesaplama.html
 - [x] 2026-10-31 Emekli zammı Ocak 2027: şimdiye kadar birikmiş oran (Temmuz–Ekim TÜFE) → /p/emekli-zammi-hesaplama.html (canlı mı kontrol et)
 - [x] 2026-10-31 Kredi kartı borcu ödenmezse ne olur? (gece: "kredi kartı asgarisini ödersem ne olur") (asgari ödeme, gecikme faizi – TCMB azami oran, yasal takip süreci) → /p/kredi-hesaplama.html veya ilgili araç
-- [ ] Mevduat faizi nasıl hesaplanır? 100 bin TL 32 günde ne getirir? (güncel oran aralığı + stopaj) → /p/mevduat-faizi-hesaplama.html
+- [x] 2026-11-02 Mevduat faizi nasıl hesaplanır? 100 bin TL 32 günde ne getirir? (güncel oran aralığı + stopaj) → /p/mevduat-faizi-hesaplama.html
 - [ ] Kredi notu nasıl yükselir? (KKB/Findeks, resmi kaynak)
 - [ ] Emekli promosyonu en yüksek veren bankalar (Kasım) → /p/emekli-promosyonu.html (sayfa canlıysa)
 - [ ] Kira artışını kim açıklıyor? (TÜİK, ayın 3'ü; Kasım oranı 3 Kasım'da) → /p/kira-artis-hesaplama.html
