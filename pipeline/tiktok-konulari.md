@@ -41,3 +41,4 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [ ] Vergi iadesi nasıl alınır? (GİB resmi kaynak, kapsam ve başvuru)
 - [x] 2026-10-31 Kira artış oranı Ekim 2026 (bilgi videosu)
 - [x] 2026-10-31 Altın düştü, cepteki altın ne kadar eridi?
+- [x] 2026-11-03 Ekim enflasyonu yüzde kaç oldu? (akşam gündem; arama: enflasyon son dakika; TÜİK: yıllık %29,77, aylık %2,58)
