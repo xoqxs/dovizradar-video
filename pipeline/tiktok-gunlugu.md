@@ -15,3 +15,4 @@
 | 2026-11-03 | tt-2026-11-03-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (3 Kasım 2026, 11.59) Do | yayınlandı (inceleniyor) |
 | 2026-11-03 | tt-2026-11-03-mevduat.mp4 | ek – 100 bin TL bankada 32 günde ne getirir? 3 Kasım 2026: Den | yayınlandı (inceleniyor) |
 | 2026-11-03 | tt-2026-11-03-aksam.mp4 | akşam – Ekim enflasyonu yüzde kaç oldu? TÜİK 3 Kasım 2026: yıllık %29 | yayınlandı (inceleniyor) |
+| 2026-11-03 | tt-2026-11-03-gece.mp4 | gece – Kredi notu nasıl yükselir? Findeks'e göre notunun %45'i ödem | yayınlandı (inceleniyor) |
