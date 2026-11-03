@@ -9,6 +9,14 @@ Seçim sırası: (1) o günün TikTok arama önerileri + doğrulanmış gündem,
 - AKŞAM = gündem sorusu, GECE = "nasıl?" rehberi (havuzdan). Teknik/uzman konuları (PMI, swap, cari açık vb.) TikTok'a KOYMA.
 - HAVUZ OTOMATİK DOLAR: Her akşam/gece çalışmasında, aşağıdaki havuzda işaretlenmemiş ([ ]) madde sayısı 6'dan azsa, o günün TikTok arama önerilerinden (para konulu, "nasıl / ne kadar / ne olur / nedir" içeren) 6 yeni madde ekle: soru + doğrulanacak resmi kaynak + ilgili dovizradar.com aracı (sayfa canlıysa). Son 14 günde işlenmiş veya havuzda zaten olan konuyu ekleme. Tahmin gerektiren konu ("dolar yükselecek mi" gibi) yalnızca olgu anlatılabiliyorsa eklenir.
 
+## NET RAKAM KURALI (Kadir Bey 3 Kasım 2026 – ZORUNLU, tüm slotlar)
+"İnsanlar net fiyat istiyor." 2 Kasım gece videosu ("Mevduat faizi nasıl hesaplanır? … örnek %40 faiz") 49 izlendi; öğle fiyat videosu 10 bin izlendi.
+- VARSAYIMSAL RAKAM YASAK: "örnek %40", "diyelim ki", "varsayalım" gibi uydurma/örnek oran KULLANMA. Her rakam bugünün GERÇEK, doğrulanmış değeri olur (tarih + kaynak).
+- CEVAP İLK 3 SANİYEDE: Kanca sorusundan hemen sonra net rakam gelir. Ör. "100 bin TL 32 günde ne getirir? Bugün net yaklaşık 2.900 TL." Formül/anlatım en sona, kısa.
+- "Nasıl hesaplanır?" yerine "Ne kadar?" sor: konu seçerken aynı ihtiyacı "ne kadar / kaç TL" diye soran aramayı seç (ör. "100 bin TL faiz getirisi ne kadar", "kredi kartı asgari ödeme ne kadar", "emekli maaşı ne kadar olacak (şu ana kadarki oranla)").
+- Banka/kurum rakamı gerekiyorsa (mevduat, kredi, promosyon): en az 3 bankanın RESMİ sayfasındaki bugünkü oranı al, bir haber kaynağıyla karşılaştır; "en yüksek / en düşük" aralığı ver ("bankalarda %X ile %Y arası"), tek banka önerme, "en iyi banka" deme. Doğrulanamıyorsa o konuyu o gün seçme.
+- Rakamı veremeyeceğin konu (henüz açıklanmamış zam vb.) yalnızca "şu ana kadar kesinleşen" rakamla anlatılır; o da yoksa konu seçilmez.
+
 ## Tohum anahtar kelimeler (öneri listesi için)
 altın, gram altın, çeyrek altın, cumhuriyet altını, altın yükselecek mi, altın alınır mı, dolar, dolar kaç tl, dolar yükselecek mi, euro, gümüş, bitcoin,
 emekli, emekli zammı, emekli maaşı, emekli promosyonu, memur zammı, asgari ücret, ocak zammı, enflasyon, kira artışı, kira zammı,
