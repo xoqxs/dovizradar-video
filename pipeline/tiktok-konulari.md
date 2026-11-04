@@ -35,7 +35,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [ ] Enflasyon nedir, maaşını nasıl eritir? (örnek hesap) → /p/enflasyon-hesaplama.html
 - [ ] Kredi borcunu ödemezsem ne olur? (BDDK/banka sözleşmesi, yasal takip süreci) → /p/kredi-hesaplama.html
 - [ ] Kredi kartı yapılandırma nasıl yapılır? (TCMB/BDDK kuralları, güncel azami oran)
-- [ ] Emekli maaşına haciz gelir mi? (5510 sayılı Kanun m.93, resmi metin)
+- [x] 2026-11-04 Emekli maaşına haciz gelir mi? (5510 sayılı Kanun m.93, resmi metin)
 - [ ] Emekli zammı ne zaman yatar? (SGK ödeme takvimi; yalnızca açıklanmış tarih)
 - [ ] SGK hizmet dökümü nasıl indirilir? (e-Devlet/SGK resmi adımlar)
 - [ ] Vergi iadesi nasıl alınır? (GİB resmi kaynak, kapsam ve başvuru)
