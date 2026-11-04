@@ -112,8 +112,18 @@ put(mix['bass'], last * BEAT, bass(36, 2.0))
 for s in SECTIONS:
     if s['kind'] == 'verse':
         put(mix['fx'], s['start'] * BEAT - 0.05, P * 0.8)
-for i, m in enumerate([72, 76, 79, 84, 79, 76, 72, 79]):
-    put(mix['glock'], (2 * i) * BEAT, glock(m) * 0.35)
+# "Sing with Tavo" signature sting (identical in every video): sol-mi-sol-DO + sparkle
+STING = [(0.0, 79, 1.0), (1.0, 76, 1.0), (2.0, 79, 0.5), (2.5, 84, 1.5)]
+for b0, m, dur in STING:
+    put(mix['glock'], b0 * BEAT, glock(m) * 0.9)
+    put(mix['lead'], b0 * BEAT, lead(m - 12, dur * BEAT) * 0.8)
+for k, m in enumerate([96, 91, 88]):   # sparkle when the pencil case opens (beat 3.5)
+    put(mix['glock'], (3.5 + k * 0.12) * BEAT, glock(m) * 0.3)
+# pops as Rosy, Lino, Rubbo jump out of the case (beats 4, 5, 6)
+for k in range(3):
+    put(mix['fx'], (4 + k) * BEAT, P * 0.7)
+for i, m in enumerate([72, 76, 79, 84]):           # soft arpeggio under Tavo's hello
+    put(mix['glock'], (8 + 2 * i) * BEAT, glock(m) * 0.3)
 
 def norm(x): return x / (np.abs(x).max() + 1e-9)
 ir_t = np.arange(int(1.6 * SR)) / SR

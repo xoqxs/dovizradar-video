@@ -5,7 +5,13 @@ from song import *
 
 SR = 44100
 k = Kokoro('/home/claude/tts/kokoro-v1.0.onnx', '/home/claude/tts/voices-v1.0.bin')
-VOICE = 'af_heart'
+try:
+    import topic as _T
+except Exception:
+    _T = None
+VOICE = getattr(_T, 'VOICE', 'af_heart')
+INTRO_LINE = getattr(_T, 'INTRO_LINE', "Hi friends! It's Tavo! Let's sing!")
+OUTRO_LINE = getattr(_T, 'OUTRO_LINE', 'Bye bye, friends! See you next time with Tavo!')
 total = TOTAL_BEATS * BEAT + 2.5
 out = np.zeros(int(total * SR))
 
@@ -30,9 +36,9 @@ def place(x, t0, gain=1.0):
     out[i:j] += x[:j - i] * gain
 
 # intro + outro narration
-place(tts("Hi friends! Let's learn colors with yummy fruits. Sing along with me!", 1.0), 1.2)
+place(tts(INTRO_LINE, 1.0), 4.3 * BEAT)
 end = [s for s in SECTIONS if s['kind'] == 'end'][0]
-place(tts("Bye bye, friends! See you next time!", 1.0), end['start'] * BEAT + 0.3)
+place(tts(OUTRO_LINE, 1.0), end['start'] * BEAT + 0.3)
 
 def chunks(line):
     # list of (text, first_beat, end_beat) grouped by words, split at punctuation / long phrases
