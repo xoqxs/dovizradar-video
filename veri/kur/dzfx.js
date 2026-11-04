@@ -10,7 +10,7 @@ function yil(y){if(!Y[y]){Y[y]=gj(CDN[0]+y+".json",7000).catch(function(){return
 function iso(t){return new Date(t).toISOString().slice(0,10)}
 function gun(s,n){return iso(Date.parse(s+"T00:00:00Z")+n*864e5)}
 /* kendi arşiv: [s,e] aralığı için {tarih:{KUR:EURoranı}} */
-function arsiv(s,e){var a=+s.slice(0,4),b=+e.slice(0,4),ps=[];for(var y=Math.max(a,2005);y<=b;y++)ps.push(yil(y).catch(function(){return null}));
+function arsiv(s,e){var a=+s.slice(0,4),b=+e.slice(0,4),ps=[];for(var y=Math.max(a,1999);y<=b;y++)ps.push(yil(y).catch(function(){return null}));
  return Promise.all(ps).then(function(js){var o={},son="",ok=0;js.forEach(function(j){if(!j)return;ok++;var c=j.c;Object.keys(j.d).forEach(function(d){if(d>son)son=d;if(d<s||d>e)return;var v=j.d[d],m={EUR:1};for(var i=0;i<c.length;i++)if(v[i]!=null)m[c[i]]=v[i];o[d]=m})});if(!ok)throw "arsiv";return {o:o,son:son}})}
 /* canlı ECB: [s,e] */
 function ecb(s,e,syms){var cs=syms.filter(function(x){return x!=="EUR"});var q=cs.length?cs.join("+"):"";
