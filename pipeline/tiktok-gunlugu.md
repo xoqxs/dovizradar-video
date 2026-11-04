@@ -18,3 +18,4 @@
 | 2026-11-03 | tt-2026-11-03-gece.mp4 | gece – Kredi notu nasıl yükselir? Findeks'e göre notunun %45'i ödem | yayınlandı (inceleniyor) |
 | 2026-11-04 | tt-2026-11-04-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (4 Kasım 2026, 11.56) Do | yayınlandı (inceleniyor) |
 | 2026-11-04 | tt-2026-11-04-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (4 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor) |
+| 2026-11-04 | tt-2026-11-04-aksam.mp4 | akşam – Emekli promosyonu kaç TL? 4 Kasım 2026 banka sayfalarına | yayınlandı (inceleniyor) |
