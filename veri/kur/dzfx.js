@@ -26,15 +26,16 @@ function cevap(url){
  if(p==="latest"||p===""){tek=1;s=gun(bugun,-12);e=bugun}
  else{var m=p.match(/^(\d{4}-\d{2}-\d{2})(\.\.(\d{4}-\d{2}-\d{2})?)?$/);if(!m)throw "bicim";
   if(m[2]){s=m[1];e=m[3]||bugun;tek=0}else{tek=1;e=m[1];s=gun(e,-12)}}
- if(e>bugun)e=bugun;
+ if(e>bugun)e=bugun;var e2=tek?gun(e,10):e;if(e2>bugun)e2=bugun;
  var need=syms.length?syms.concat([base]):[];
  var eksik=false;
- return arsiv(s,e).then(function(A){
+ return arsiv(s,e2).then(function(A){
    if(A.son&&A.son<e){var gs=gun(A.son,1);return ecb(gs,e,need.length?need:[]).then(function(B){for(var d in B)A.o[d]=B[d];return A.o}).catch(function(){eksik=true;return A.o})}
    return A.o
-  },function(){return ecb(s,e,need.length?need:[])})
+  },function(){return ecb(s,e2,need.length?need:[])})
  .then(function(o){var ds=Object.keys(o).sort();if(!ds.length)throw "bos";
-   if(tek){for(var i=ds.length-1;i>=0;i--){var r=cevir(o[ds[i]],base,syms,amt);if(r)return {eksik:eksik,j:{amount:amt,base:base,date:ds[i],rates:r}}}throw "bos"}
+   if(tek){var i,r;for(i=ds.length-1;i>=0;i--){if(ds[i]>e)continue;r=cevir(o[ds[i]],base,syms,amt);if(r)return {eksik:eksik,j:{amount:amt,base:base,date:ds[i],rates:r}}}
+    for(i=0;i<ds.length;i++){if(ds[i]<=e)continue;r=cevir(o[ds[i]],base,syms,amt);if(r)return {eksik:eksik,j:{amount:amt,base:base,date:ds[i],rates:r}}}throw "bos"}
    var R={},f="",l="";ds.forEach(function(d){var r=cevir(o[d],base,syms,amt);if(r){R[d]=r;if(!f)f=d;l=d}});if(!f)throw "bos";
    return {eksik:eksik,j:{amount:amt,base:base,start_date:f,end_date:l,rates:R}}})}
 function yanit(j){return new Response(JSON.stringify(j),{status:200,headers:{"Content-Type":"application/json"}})}
@@ -43,7 +44,7 @@ window.fetch=function(inp,init){var url=typeof inp==="string"?inp:(inp&&inp.url)
  var sig=init&&init.signal;
  var P=cevap(url).then(function(x){if(!x.eksik)return yanit(x.j);
     return tmo(OF(url),8000).then(function(r){if(!r.ok)throw 0;return r}).catch(function(){return yanit(x.j)})},
-   function(){return OF(url)});
+   function(){return tmo(OF(url),9000)});
  if(!sig)return P;
  return new Promise(function(res,rej){if(sig.aborted)return rej(new DOMException("Aborted","AbortError"));sig.addEventListener("abort",function(){rej(new DOMException("Aborted","AbortError"))});P.then(res,rej)})};
 })();
