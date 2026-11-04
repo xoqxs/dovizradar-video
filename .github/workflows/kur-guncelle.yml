@@ -1,0 +1,23 @@
+name: Geçmiş kur verisini güncelle (ECB)
+on:
+  schedule:
+    - cron: "20 15 * * 1-5"   # ECB kurları ~16:00 CET'te yayımlanır (15:20 UTC ≈ 18:20 TSİ)
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  guncelle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ECB tarihsel kurlarını indir ve yıllık dosyaları üret
+        run: |
+          curl -fsSL -o /tmp/ecb.zip https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip
+          unzip -o -q /tmp/ecb.zip -d /tmp/ecb
+          python3 veri/kur/olustur.py /tmp/ecb/eurofxref-hist.csv veri/kur
+      - name: Değişiklik varsa kaydet
+        run: |
+          git config user.name "dovizradar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add veri/kur/*.json
+          git diff --cached --quiet || (git commit -m "Geçmiş kur verisi güncellendi (ECB) $(date -u +%F)" && git push)
