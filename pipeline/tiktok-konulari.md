@@ -37,7 +37,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [ ] Kredi kartı yapılandırma nasıl yapılır? (TCMB/BDDK kuralları, güncel azami oran)
 - [x] 2026-11-04 Emekli maaşına haciz gelir mi? (5510 sayılı Kanun m.93, resmi metin)
 - [ ] Emekli zammı ne zaman yatar? (SGK ödeme takvimi; yalnızca açıklanmış tarih)
-- [ ] SGK hizmet dökümü nasıl indirilir? (e-Devlet/SGK resmi adımlar)
+- [x] 2026-11-05 SGK hizmet dökümü nasıl indirilir? (e-Devlet/SGK resmi adımlar)
 - [ ] Vergi iadesi nasıl alınır? (GİB resmi kaynak, kapsam ve başvuru)
 - [x] 2026-10-31 Kira artış oranı Ekim 2026 (bilgi videosu)
 - [x] 2026-10-31 Altın düştü, cepteki altın ne kadar eridi?
