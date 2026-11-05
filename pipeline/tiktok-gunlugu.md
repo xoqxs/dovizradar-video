@@ -22,3 +22,4 @@
 | 2026-11-04 | tt-2026-11-04-gece.mp4 | gece – Emekli maaşına haciz gelir mi? 5510 sayılı Kanun madde 9 | yayınlandı (inceleniyor) |
 | 2026-11-05 | tt-2026-11-05-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (5 Kasım 2026, 11.39) Gr | yayınlandı (inceleniyor) |
 | 2026-11-05 | tt-2026-11-05-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (5 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor) |
+| 2026-11-05 | tt-2026-11-05-aksam.mp4 | akşam – Konut kredisi faiz oranları kaç oldu? 5 Kasım 2026: 120 ay | yayınlandı (inceleniyor) |
