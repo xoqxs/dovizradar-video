@@ -72,7 +72,6 @@
 2026-10-30	File:Eccles Federal Reserve Board Building.jpg
 2026-10-30	File:Seal of the United States Federal Reserve Board.svg
 2026-10-30	File:1 United States dollar banknotes (348734).jpg
-2026-10-30	File:Euro banknotes, Europa series.png
 2026-10-30	File:Chip gold bullion bar.jpg
 2026-10-30	File:Central Bank of the Republic of Turkey Tower, Istanbul..jpg
 2026-10-30	File:Vegetables in a Turkish pazar.jpg
@@ -214,7 +213,6 @@
 2026-11-02	File:Golden bracelets.jpg
 2026-11-02	File:Grand Bazaar, Istanbul 2.jpg
 2026-11-02	File:Exchange rates sign.jpg
-2026-11-02	File:Euro banknotes, Europa series.png
 2026-11-02	File:Uncut Strip of 50 Euro Banknotes.jpg
 2026-11-02	File:Various euro coins.jpg
 2026-11-02	File:2019 American Silver Eagle and 1943 Walking Liberty Half dollar side by side.jpg
@@ -453,3 +451,13 @@
 2026-11-06	File:Bitcoin on Laptop Keyboard.jpg
 2026-11-06	File:Grand Bazaar (Istanbul).jpg
 2026-11-06	File:Grand Bazaar, Istanbul 2.jpg
+2026-11-06	File:Blue Mosque In Dawn (122678105).jpeg
+2026-11-06	File:5 United States dollar banknotes (83434).jpg
+2026-11-06	File:Uncut Strip of 50 Euro Banknotes.jpg
+2026-11-06	File:Gold bullion bars.jpg
+2026-11-06	File:Gold bar of Banque de France.jpg
+2026-11-06	File:Grand Bazaar Istanbul 2007.jpg
+2026-11-06	File:1957 one United States dollar star note.jpg
+2026-11-06	File:Modern Istanbul skyline at sunset.jpg
+2026-11-06	File:Istanbul City skyline at Sunset.jpg
+2026-11-06	File:Menendez Gold Bar.png
