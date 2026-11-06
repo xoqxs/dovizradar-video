@@ -11,7 +11,7 @@
       SITE = "https://www.dovizradar.com",
       L = {
         liste: { b: "Canlı piyasalar", k: [["USD", "Dolar", "/p/dolar-kac-tl.html"], ["EUR", "Euro", "/p/euro-kac-tl.html"], ["GBP", "Sterlin", "/p/sterlin-kac-tl.html"], ["GRA", "Gram altın", "/p/altin-hesaplama.html"], ["CEYREKALTIN", "Çeyrek altın", "/p/altin-hesaplama.html"], ["c:bitcoin", "Bitcoin", "/"]] },
-        doviz: { b: "Döviz kurları", k: [["USD", "ABD doları"], ["EUR", "Euro"], ["GBP", "İngiliz sterlini"], ["CHF", "İsviçre frangı"], ["SAR", "Suudi riyali"], ["AED", "BAE dirhemi"], ["RUB", "Rus rublesi"], ["JPY", "Japon yeni"]] },
+        doviz: { b: "Döviz kurları", k: [["USD", "ABD doları"], ["EUR", "Euro"], ["GBP", "İngiliz sterlini"], ["CHF", "İsviçre frangı"], ["SAR", "Suudi riyali"], ["AED", "BAE dirhemi"], ["RUB", "Rus rublesi"], ["KWD", "Kuveyt dinarı"]] },
         altin: { b: "Altın fiyatları", k: [["GRA", "Gram altın"], ["CEYREKALTIN", "Çeyrek altın"], ["YARIMALTIN", "Yarım altın"], ["TAMALTIN", "Tam altın"], ["CUMHURIYETALTINI", "Cumhuriyet altını"], ["14AYARALTIN", "14 ayar (gram)"], ["GUMUS", "Gram gümüş"]] },
         kripto: { b: "Kripto paralar", k: [["c:bitcoin", "Bitcoin"], ["c:ethereum", "Ethereum"], ["c:solana", "Solana"], ["c:ripple", "XRP"], ["c:tether", "Tether (USDT)"]] }
       },
