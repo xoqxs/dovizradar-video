@@ -43,3 +43,4 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [x] 2026-10-31 Altın düştü, cepteki altın ne kadar eridi?
 - [x] 2026-11-03 Ekim enflasyonu yüzde kaç oldu? (akşam gündem; arama: enflasyon son dakika; TÜİK: yıllık %29,77, aylık %2,58)
 - [x] 2026-11-05 Konut kredisi faiz oranları kaç oldu? (akşam gündem; arama: konut kredisi faiz oranları; Yapı Kredi %2,88, Halkbank %2,99, DenizBank %3,16, 120 ay)
+- [x] 2026-11-06 Benzine indirim geldi, benzin kaç TL oldu? (akşam gündem; arama: yakıt zammı son dakika; 6,08 TL indirim, İstanbul Avrupa 74,60 TL, Ankara 75,60 TL – Petrol Ofisi + Timeturk/A Haber) → /p/akaryakit-fiyatlari.html
