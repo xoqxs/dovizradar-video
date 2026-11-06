@@ -31,9 +31,18 @@
   function get(u, ms) {
     return new Promise(function (ok, no) {
       var done = false, t = setTimeout(function () { done = true; no("zaman"); }, ms || 8000);
-      fetch(u, { cache: "no-store" }).then(function (r) { if (!r.ok) throw r.status; return r.json(); })
+      fetch(u, { cache: "no-store" }).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(pj)
         .then(function (j) { if (!done) { clearTimeout(t); ok(j); } }, function (e) { if (!done) { clearTimeout(t); no(e); } });
     });
+  }
+  /* Kaynak bazen JSON'u eksik kapanışla gönderir: onarmayı dene */
+  function pj(t) {
+    t = String(t).trim();
+    try { return JSON.parse(t); } catch (e) {}
+    for (var s = "}", i = 0; i < 2; i++, s += "}") { try { return JSON.parse(t + s); } catch (e) {} }
+    var k = t.lastIndexOf("},\"");
+    if (k > 0) { try { return JSON.parse(t.slice(0, k + 1) + "}"); } catch (e) {} }
+    throw "json";
   }
   function load(needCg) {
     if (Date.now() - cache.t < 55000 && cache.tr && (!needCg || cache.cg)) return Promise.resolve(cache);
