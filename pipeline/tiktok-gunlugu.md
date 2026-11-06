@@ -27,3 +27,4 @@
 | 2026-11-06 | tt-2026-11-06-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (6 Kasım 2026, 11.39)  | yayınlandı (inceleniyor) |
 | 2026-11-06 | tt-2026-11-06-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (6 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor) |
 | 2026-11-06 | tt-2026-11-06-aksam.mp4 | akşam – Benzine indirim geldi, benzin kaç TL oldu? 6 Kasım 2026: b | yayınlandı (inceleniyor) |
+| 2026-11-06 | tt-2026-11-06-gece.mp4 | gece – Kredi kartı aidatı geri nasıl alınır? 6 Kasım 2026: BDDK'ya | yayınlandı (inceleniyor) |
