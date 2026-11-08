@@ -31,3 +31,4 @@
 | 2026-11-07 | tt-2026-11-07-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (7 Kasım 2026, 11.40 –  | yayınlandı (inceleniyor) |
 | 2026-11-07 | tt-2026-11-07-kapanis.mp4 | kapanış – Bu hafta dolar ve altın ne kadar değişti? (7 Kasım 2026) Cum | yayınlandı (inceleniyor) |
 | 2026-11-07 | tt-2026-11-07-aksam.mp4 | akşam – Bedelli askerlik Ocak'ta kaç TL olacak? 7 Kasım 2026 itiba | yayınlandı (inceleniyor) |
+| 2026-11-08 | tt-2026-11-08-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (8 Kasım 2026, 11.40 –  | yayınlandı (inceleniyor) |
