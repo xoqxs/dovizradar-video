@@ -34,7 +34,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [x] 2026-11-02 Asgari ücret 2027 ne zaman açıklanacak? (yalnızca resmi takvim/olgu; rakam tahmini YOK)
 - [ ] Enflasyon nedir, maaşını nasıl eritir? (örnek hesap) → /p/enflasyon-hesaplama.html
 - [ ] Kredi borcunu ödemezsem ne olur? (BDDK/banka sözleşmesi, yasal takip süreci) → /p/kredi-hesaplama.html
-- [ ] Kredi kartı yapılandırma nasıl yapılır? (TCMB/BDDK kuralları, güncel azami oran)
+- [x] 2026-11-08 Kredi kartı yapılandırma nasıl yapılır? (gece; arama: kredi kartı yapılandırma; BDDK 48 ay hakkı son başvuru 29 Nisan 2026 – TGRT + NTV; azami akdi faiz %3,25/%3,75/%4,25, TCMB Ekim tablosu – Sözcü + BirGün Eylül; başvuru borçlu bankaya – NTV + HangiKredi) → /p/kredi-hesaplama.html
 - [x] 2026-11-04 Emekli maaşına haciz gelir mi? (5510 sayılı Kanun m.93, resmi metin)
 - [ ] Emekli zammı ne zaman yatar? (SGK ödeme takvimi; yalnızca açıklanmış tarih)
 - [x] 2026-11-05 SGK hizmet dökümü nasıl indirilir? (e-Devlet/SGK resmi adımlar)
@@ -47,3 +47,9 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [x] 2026-11-06 Kredi kartı aidatı geri nasıl alınır? (gece; arama: kredi kartı aidat iadesi / aidatı geri nasıl alınır; BDDK SSS: aidatsız kart zorunlu, limit aynı, hiç kullanılmayan/180 gün hareketsiz karta aidat yok; Tüketici Hakem Heyeti 2026 sınırı 186.000 TL – Cumhuriyet + Forbes) → /p/kredi-hesaplama.html
 - [x] 2026-11-07 Bedelli askerlik Ocak'ta kaç TL olacak? (akşam gündem; arama: ocak zammı bedelli askerlik; MSB: 472.653,60 TL 1 Tem–31 Ara 2026, ilk yarı 416.361,30 TL – GZT + Halk TV + Ekonomist; Ocak 2027 tutarı kesinleşmedi) → /p/enflasyon-hesaplama.html
 - [x] 2026-11-08 Emekli maaşı son dakika: Bakan Işıkhan ne dedi? (akşam gündem; arama: emekli maaşı son dakika 2027; Işıkhan 8 Kasım Mardin: "güzel müjdelerimiz olacak", rakam yok; asgari ücret çalışması aralıkta – GZT + Gazete Oksijen; 4 aylık %8,28 – Vatan + Borsagündem %8,29; en düşük aylık 23.552 TL – Vatan + Türkgün) → /p/emekli-zammi-hesaplama.html
+- [ ] Kredi kartı limit yükseltme ne kadar, nasıl yapılır? (BDDK limit kuralları, güncel karar) → /p/kredi-hesaplama.html
+- [ ] SGK borç sorgulama nasıl yapılır? (e-Devlet/SGK resmi adımlar)
+- [ ] İhtiyaç kredisi faizi ne kadar? (en az 3 bankanın resmi sayfası + haber kaynağı) → /p/kredi-hesaplama.html
+- [ ] SGK aktif durumu nasıl öğrenilir? (e-Devlet/SGK resmi adımlar)
+- [ ] SGK yapılandırma 2026 var mı, kaç taksit? (SGK/Resmî Gazete; yalnızca kesinleşen)
+- [ ] Kredi kartı nasıl alınır, gelir şartı ne? (BDDK kuralları + banka resmi sayfaları)
