@@ -53,3 +53,4 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [ ] SGK aktif durumu nasıl öğrenilir? (e-Devlet/SGK resmi adımlar)
 - [ ] SGK yapılandırma 2026 var mı, kaç taksit? (SGK/Resmî Gazete; yalnızca kesinleşen)
 - [ ] Kredi kartı nasıl alınır, gelir şartı ne? (BDDK kuralları + banka resmi sayfaları)
+- [x] 2026-11-09 Ocak zammı 2027: MTV ne kadar olacak? (akşam gündem; arama: ocak zammı 2027; YDO %27,83 – Türkiye Gazetesi + A Haber + Milli Gazete; 1-3 yaş 1.3 motor 7.350 TL, 1.6 üst dilim 15.375 TL, 7-11 yaş yaklaşık 2.860/5.570 TL; henüz kesinleşmedi, Cumhurbaşkanı oranı değiştirebilir; Ocak-Temmuz 2 taksit) → /p/enflasyon-hesaplama.html
