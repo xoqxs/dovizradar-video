@@ -35,3 +35,4 @@
 | 2026-11-08 | tt-2026-11-08-aksam.mp4 | akşam – Emekli maaşı son dakika: Bakan Işıkhan ne dedi? 8 Kasım 2026: | yayınlandı (inceleniyor) |
 | 2026-11-08 | tt-2026-11-08-gece.mp4 | gece – Kredi kartı yapılandırma nasıl yapılır? BDDK'nın 48 ay ha | yayınlandı (inceleniyor) |
 | 2026-11-09 | tt-2026-11-09-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (9 Kasım 2026, 11.42) Gra | yayınlandı (inceleniyor) |
+| 2026-11-09 | tt-2026-11-09-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (9 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor) |
