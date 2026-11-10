@@ -39,3 +39,4 @@
 | 2026-11-09 | tt-2026-11-09-aksam.mp4 | akşam – Ocak zammı 2027: MTV ne kadar olacak? 9 Kasım 2026 hesabı: a | yayınlandı (inceleniyor) |
 | 2026-11-09 | tt-2026-11-09-gece.mp4 | gece – Kredi kartı limiti ne kadar yükselir? BDDK kuralı: ilk yıl g | yayınlandı (inceleniyor) |
 | 2026-11-10 | tt-2026-11-10-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (10 Kasım 2026, 11.39) Gra | yayınlandı (AÇIKLAMA KAYDOLMADI: TikTok'ta dosya adı görünüyor; editörde metin doğrulanmıştı) |
+| 2026-11-10 | tt-2026-11-10-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (10 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor) |
