@@ -41,3 +41,4 @@
 | 2026-11-10 | tt-2026-11-10-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (10 Kasım 2026, 11.39) Gra | yayınlandı (AÇIKLAMA KAYDOLMADI: TikTok'ta dosya adı görünüyor; editörde metin doğrulanmıştı) |
 | 2026-11-10 | tt-2026-11-10-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (10 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor) |
 | 2026-11-10 | tt-2026-11-10-aksam.mp4 | akşam – Kasım'da kira zammı yüzde kaç? TÜİK 3 Kasım 2026: Kasım | yayınlandı (inceleniyor) |
+| 2026-11-10 | tt-2026-11-10-gece.mp4 | gece – SGK borcu nasıl sorgulanır? 2026'da GSS primi aylık yaklaşık | yayınlandı (inceleniyor) |
