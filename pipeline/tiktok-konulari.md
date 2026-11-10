@@ -30,7 +30,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [x] 2026-11-02 Mevduat faizi nasıl hesaplanır? 100 bin TL 32 günde ne getirir? (güncel oran aralığı + stopaj) → /p/mevduat-faizi-hesaplama.html
 - [x] 2026-11-03 Kredi notu nasıl yükselir? (KKB/Findeks, resmi kaynak)
 - [x] 2026-11-04 Emekli promosyonu en yüksek veren bankalar (Kasım; /p/emekli-promosyonu.html sayfası yok, 404)
-- [ ] Kira artışını kim açıklıyor? (TÜİK, ayın 3'ü; Kasım oranı 3 Kasım'da) → /p/kira-artis-hesaplama.html
+- [x] 2026-11-10 Kira artışını kim açıklıyor? / Kasım'da kira zammı yüzde kaç? (akşam gündem; arama: kira artışı son dakika 2026 / kira artış oranı 2026; TÜİK 3 Kasım: 12 aylık ortalama %31,23 – Ekonomist + Muhasebenews + Paratic; 20.000 TL → 26.246 TL; TBK md. 344) → /p/kira-artis-hesaplama.html
 - [x] 2026-11-02 Asgari ücret 2027 ne zaman açıklanacak? (yalnızca resmi takvim/olgu; rakam tahmini YOK)
 - [ ] Enflasyon nedir, maaşını nasıl eritir? (örnek hesap) → /p/enflasyon-hesaplama.html
 - [ ] Kredi borcunu ödemezsem ne olur? (BDDK/banka sözleşmesi, yasal takip süreci) → /p/kredi-hesaplama.html
