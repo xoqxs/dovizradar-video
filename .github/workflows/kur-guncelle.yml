@@ -21,3 +21,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add veri/kur/*.json
           git diff --cached --quiet || (git commit -m "Geçmiş kur verisi güncellendi (ECB) $(date -u +%F)" && git push)
+      - name: jsDelivr önbelleğini temizle (site güncel dosyayı görsün)
+        run: |
+          Y=$(date -u +%Y)
+          curl -fsS "https://purge.jsdelivr.net/gh/xoqxs/dovizradar-video@main/veri/kur/$Y.json" || echo "purge başarısız, sorun değil"
