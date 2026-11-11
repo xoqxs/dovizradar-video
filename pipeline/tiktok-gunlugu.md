@@ -45,3 +45,4 @@
 | 2026-11-11 | tt-2026-11-11-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (11 Kasım 2026, 11.41) Gra | yayınlandı (inceleniyor; AÇIKLAMA KAYDOLMADI 2. gün: TikTok'ta dosya adı 'dolar-euro-altin-11-kasim' görünüyor; editörde metin doğrulanmıştı) |
 | 2026-11-11 | tt-2026-11-11-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (11 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor) |
 | 2026-11-11 | tt-2026-11-11-aksam.mp4 | akşam – Enflasyon son dakika: Merkez Bankası yarın ne açıklayacak? | yayınlandı (inceleniyor) |
+| 2026-11-11 | tt-2026-11-11-gece.mp4 | gece – İhtiyaç kredisi kaç ay vadeyle çekilir? Kasım 2026'da 1 | yayınlandı (inceleniyor) |
