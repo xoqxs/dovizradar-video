@@ -8,3 +8,4 @@
 | 2026-11-06 | çiftlik hayvanları | Who Says Moo? | af_heart | https://youtu.be/dcveBjxuNCI | https://youtube.com/shorts/2ZWrruxB3TU | yayınlandı |
 | 2026-11-08 | derleme – Who Says Moo?, Look Up at the Sky, Colors in My Lunchbox, Hello Little Shapes | Sing with Tavo Song Mix | af_heart | https://youtu.be/tYllqaBVjq0 | – | yayınlandı |
 | 2026-11-09 | taşıtlar | Beep Beep, Who Is Here? | af_heart | https://youtu.be/Z6yBhtiffQQ | https://youtube.com/shorts/ZaXMzuJXXs4 | yayınlandı |
+| 2026-11-11 | okyanus hayvanları | Splash, Who Is in the Sea? | af_heart | https://youtu.be/N1pODakOEf4 | https://youtube.com/shorts/8ysUv5fB4sA | yayınlandı |
