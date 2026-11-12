@@ -48,3 +48,4 @@
 | 2026-11-11 | tt-2026-11-11-gece.mp4 | gece – İhtiyaç kredisi kaç ay vadeyle çekilir? Kasım 2026'da 1 | yayınlandı (inceleniyor) |
 | 2026-11-12 | tt-2026-11-12-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (12 Kasım 2026, 11.38) Gra | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-12 | tt-2026-11-12-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (12 Kasım 2026, 17.40) Gra | yayınlandı (inceleniyor; açıklama listede doğru) |
+| 2026-11-12 | tt-2026-11-12-aksam.mp4 | akşam – Enflasyon ne zaman tek haneye inecek? Merkez Bankası 12 Kas | yayınlandı (inceleniyor; açıklama listede doğru) |
