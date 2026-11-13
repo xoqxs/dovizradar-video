@@ -38,7 +38,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [x] 2026-11-04 Emekli maaşına haciz gelir mi? (5510 sayılı Kanun m.93, resmi metin)
 - [ ] Emekli zammı ne zaman yatar? (SGK ödeme takvimi; yalnızca açıklanmış tarih)
 - [x] 2026-11-05 SGK hizmet dökümü nasıl indirilir? (e-Devlet/SGK resmi adımlar)
-- [ ] Vergi iadesi nasıl alınır? (GİB resmi kaynak, kapsam ve başvuru)
+- [x] 2026-11-13 Vergi iadesi nasıl alınır? (gece; arama: vergi iadesi nasıl alınır / vergi iadesi fiş fatura lazım; fişle iade 5615 sayılı Kanun ile 2007'de kalktı – Memurlar.net + Alomaliye; eğitim/sağlık harcaması beyan edilen gelirin %10'una kadar, yalnızca yıllık beyannamede, tek işverenden ücretli yararlanamaz, GVK 89/2 – Alomaliye (T. Apak, Mart 2026) + Ekonomi Gazetesi (B. Doğrusöz, 17 Mart 2026)) → /p/brutten-nete-maas-hesaplama.html
 - [x] 2026-10-31 Kira artış oranı Ekim 2026 (bilgi videosu)
 - [x] 2026-10-31 Altın düştü, cepteki altın ne kadar eridi?
 - [x] 2026-11-03 Ekim enflasyonu yüzde kaç oldu? (akşam gündem; arama: enflasyon son dakika; TÜİK: yıllık %29,77, aylık %2,58)
