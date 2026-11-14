@@ -57,3 +57,4 @@
 | 2026-11-14 | tt-2026-11-14-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (14 Kasım 2026, 11.40  | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-14 | tt-2026-11-14-kapanis.mp4 | kapanış – Bu hafta dolar ve altın ne kadar değişti? (14 Kasım 2026 | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-14 | tt-2026-11-14-aksam.mp4 | akşam – Emekli, memur, asgari ücretli 2026'da ne kadar zam aldı? | yayınlandı (inceleniyor; açıklama listede doğru) |
+| 2026-11-14 | tt-2026-11-14-gece.mp4 | gece – Vergi borcu ödenmezse ne olur? Kasım 2026 itibarıyla gecikme z | yayınlandı (inceleniyor; açıklama listede doğru) |
