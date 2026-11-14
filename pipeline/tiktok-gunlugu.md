@@ -54,3 +54,4 @@
 | 2026-11-13 | tt-2026-11-13-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (13 Kasım 2026) Gra | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-13 | tt-2026-11-13-aksam.mp4 | akşam – Dolar yıl sonunda kaç TL olacak? TCMB'nin 13 Kasım 2026 an | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-13 | tt-2026-11-13-gece.mp4 | gece – Vergi iadesi nasıl alınır, fiş fatura lazım mı? Fişle vergi | yayınlandı (inceleniyor; açıklama listede doğru) |
+| 2026-11-14 | tt-2026-11-14-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (14 Kasım 2026, 11.40  | yayınlandı (inceleniyor; açıklama listede doğru) |
