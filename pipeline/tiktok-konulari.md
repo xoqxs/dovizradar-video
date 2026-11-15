@@ -33,7 +33,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 - [x] 2026-11-10 Kira artışını kim açıklıyor? / Kasım'da kira zammı yüzde kaç? (akşam gündem; arama: kira artışı son dakika 2026 / kira artış oranı 2026; TÜİK 3 Kasım: 12 aylık ortalama %31,23 – Ekonomist + Muhasebenews + Paratic; 20.000 TL → 26.246 TL; TBK md. 344) → /p/kira-artis-hesaplama.html
 - [x] 2026-11-02 Asgari ücret 2027 ne zaman açıklanacak? (yalnızca resmi takvim/olgu; rakam tahmini YOK)
 - [ ] Enflasyon nedir, maaşını nasıl eritir? (örnek hesap) → /p/enflasyon-hesaplama.html
-- [ ] Kredi borcunu ödemezsem ne olur? (BDDK/banka sözleşmesi, yasal takip süreci) → /p/kredi-hesaplama.html
+- [x] 2026-11-15 Kredi borcunu ödemezsem ne olur? (gece; arama: kredi borcunu ödemezsem ne olur; Tüketici Kredisi Sözleşmeleri Yönetmeliği m.18: art arda 2 taksit + en az 30 gün süre → borcun tamamı, ~90 gün sonra yasal takip; gecikme faizi akdi faizin en fazla %30 fazlası; maaşın en fazla 1/4'ü haczedilebilir (İş K. m.35) – Hesapkurdu (3 Eyl 2026) + ENUYGUN Finans (24 Haz 2026)) → /p/kredi-hesaplama.html
 - [x] 2026-11-08 Kredi kartı yapılandırma nasıl yapılır? (gece; arama: kredi kartı yapılandırma; BDDK 48 ay hakkı son başvuru 29 Nisan 2026 – TGRT + NTV; azami akdi faiz %3,25/%3,75/%4,25, TCMB Ekim tablosu – Sözcü + BirGün Eylül; başvuru borçlu bankaya – NTV + HangiKredi) → /p/kredi-hesaplama.html
 - [x] 2026-11-04 Emekli maaşına haciz gelir mi? (5510 sayılı Kanun m.93, resmi metin)
 - [ ] Emekli zammı ne zaman yatar? (SGK ödeme takvimi; yalnızca açıklanmış tarih)

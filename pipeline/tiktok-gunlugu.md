@@ -60,3 +60,4 @@
 | 2026-11-14 | tt-2026-11-14-gece.mp4 | gece – Vergi borcu ödenmezse ne olur? Kasım 2026 itibarıyla gecikme z | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-15 | tt-2026-11-15-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (15 Kasım 2026, 11.40) Pia | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-15 | tt-2026-11-15-aksam.mp4 | akşam – Doğalgazda kademe sınırı yükseldi mi? 15 Kasım 2026: BOTAŞ K | yayınlandı (inceleniyor; açıklama listede doğru) |
+| 2026-11-15 | tt-2026-11-15-gece.mp4 | gece – Kredi borcunu ödemezsem ne olur? Tüketici Kredisi Sözleşmeleri | yayınlandı (inceleniyor; açıklama listede doğru) |
