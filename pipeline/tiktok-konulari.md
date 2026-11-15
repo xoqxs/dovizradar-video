@@ -17,6 +17,17 @@ Seçim sırası: (1) o günün TikTok arama önerileri + doğrulanmış gündem,
 - Banka/kurum rakamı gerekiyorsa (mevduat, kredi, promosyon): en az 3 bankanın RESMİ sayfasındaki bugünkü oranı al, bir haber kaynağıyla karşılaştır; "en yüksek / en düşük" aralığı ver ("bankalarda %X ile %Y arası"), tek banka önerme, "en iyi banka" deme. Doğrulanamıyorsa o konuyu o gün seçme.
 - Rakamı veremeyeceğin konu (henüz açıklanmamış zam vb.) yalnızca "şu ana kadar kesinleşen" rakamla anlatılır; o da yoksa konu seçilmez.
 
+## AYLIK TCMB ANKETİ KURALI (Kadir Bey 16 Kasım 2026 onayladı)
+13 Kasım "Dolar yıl sonunda kaç TL olacak?" videosu 81 bin izlendi, 548 paylaşım, 529 yeni takipçi (kanalın en iyi videosu). Bu format her ay tekrarlanır:
+- TCMB Piyasa Katılımcıları Anketi her ay (genelde ayın ortasında) yayımlanır. Yayımlandığı gün AKŞAM slotu = "Dolar yıl sonunda kaç TL olacak?" (yıl sonu ve 12 ay sonrası dolar/TL beklentisi, bir önceki ayın anketiyle kıyas). 14 günlük tekrar kuralı bu videoya uygulanmaz (ayda 1).
+- Aynı anketten, FARKLI günlerde akşam slotunda en fazla 2 video daha yapılabilir (aşağıdaki havuz maddeleri): yıl sonu enflasyon beklentisi, yıl sonu / 12 ay sonrası politika faizi beklentisi. Büyüme ve cari denge TikTok'a KONMAZ (teknik).
+- Anket yalnızca DOLAR/TL içerir; euro, sterlin, altın için resmi beklenti YOKTUR. Bu kalemler için "yıl sonunda kaç olacak" videosu YAPMA, rakam türetme.
+- Her videoda açıkça: "Bu Merkez Bankası anketindeki piyasa beklentisidir, kesin rakam değildir; Döviz Radar tahmin yapmaz." Rakamlar TCMB'nin anket sayfası + 1 haber kaynağıyla doğrulanır. Al-sat tavsiyesi YOK.
+- İlk 2 saniye: soru + net rakam (ör. "Dolar yıl sonunda kaç TL? Merkez Bankası anketi: 51,61").
+- [ ] Enflasyon yıl sonunda yüzde kaç olacak? (TCMB Kasım 2026 anketi: yıl sonu ve 12 ay sonrası TÜFE beklentisi; TCMB + 1 haber) → /p/enflasyon-hesaplama.html
+- [ ] Faiz yıl sonunda kaç olacak? (TCMB Kasım 2026 anketi: Aralık PPK ve 12 ay sonrası politika faizi beklentisi; güncel politika faizi %36) → /p/tcmb-faiz-kararlari.html
+- [ ] Dolar yıl sonunda kaç TL olacak? – ARALIK anketi (yayımlandığı gün; Kasım: yıl sonu 51,61, 12 ay 60,77 ile kıyas) → /p/dolar-kac-tl.html
+
 ## Tohum anahtar kelimeler (öneri listesi için)
 altın, gram altın, çeyrek altın, cumhuriyet altını, altın yükselecek mi, altın alınır mı, dolar, dolar kaç tl, dolar yükselecek mi, euro, gümüş, bitcoin,
 emekli, emekli zammı, emekli maaşı, emekli promosyonu, memur zammı, asgari ücret, ocak zammı, enflasyon, kira artışı, kira zammı,
