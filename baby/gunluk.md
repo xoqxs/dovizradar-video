@@ -10,3 +10,4 @@
 | 2026-11-09 | taşıtlar | Beep Beep, Who Is Here? | af_heart | https://youtu.be/Z6yBhtiffQQ | https://youtube.com/shorts/ZaXMzuJXXs4 | yayınlandı |
 | 2026-11-11 | okyanus hayvanları | Splash, Who Is in the Sea? | af_heart | https://youtu.be/N1pODakOEf4 | https://youtube.com/shorts/8ysUv5fB4sA | yayınlandı |
 | 2026-11-15 | derleme – Splash Who Is in the Sea?, Beep Beep Who Is Here?, Who Says Moo?, Look Up at the Sky | Sing with Tavo Song Mix: Sea, Vehicles, Farm & Weather | af_heart | https://youtu.be/3jYXeqwvLOc | – | yayınlandı |
+| 2026-11-13 | bahçe böcekleri | Tiny Bugs in My Garden | af_heart | https://youtu.be/hTmJRDkdl0Y | https://youtube.com/shorts/R0N-aOvLJA8 | yayınlandı (telafi, 15 Kasım'da) |
