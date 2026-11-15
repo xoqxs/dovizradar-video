@@ -13,29 +13,31 @@ from chars import canvas, face, finish
 TITLE = 'Colors in My Lunchbox'
 TOPIC = 'colors'
 VOICE = 'af_heart'                      # Tavo's fixed voice – do not change
-INTRO_LINE = "Hi friends! It's Tavo! Let's sing about colors!"
+INTRO_LINE = "Hi friends! It's Tavo! My lunchbox is full of colors. Let's sing!"
 OUTRO_LINE = "Bye bye, friends! See you next time with Tavo!"
 CHORUS_TITLE = 'Colors, colors!'
 OUTRO_TITLE = 'Healthy colors!'
 
 # Background themes used by song.py section 'theme' names (and by VERSES).
 # top/bot = gradient, col = accent (big word + lyric highlight), ground = hill colour, rainbow = draw rainbow arc
+PARK = dict(top=(150, 212, 255), bot=(226, 246, 255), col=(216, 27, 96), scene='park')
+# Every theme needs a scene that fits the song: sea, farm, road, sky, garden, night, room, park (see engine.SCENES).
 THEMES = {
-    'title':   dict(top=(170, 222, 255), bot=(232, 248, 255), col=(216, 27, 96), rainbow=True),
-    'red':     dict(top=(255, 232, 232), bot=(255, 186, 186), col=(229, 57, 53)),
-    'yellow':  dict(top=(255, 250, 220), bot=(255, 226, 140), col=(232, 150, 0)),
-    'green':   dict(top=(232, 250, 228), bot=(178, 232, 170), col=(56, 150, 60)),
-    'blue':    dict(top=(228, 242, 255), bot=(170, 212, 255), col=(30, 120, 220)),
-    'rainbow': dict(top=(170, 222, 255), bot=(232, 248, 255), col=(216, 27, 96), rainbow=True),
-    'end':     dict(top=(170, 222, 255), bot=(232, 248, 255), col=(216, 27, 96), rainbow=True),
+    'title':   PARK,
+    'red':     dict(PARK, col=(229, 57, 53)),
+    'yellow':  dict(PARK, col=(232, 150, 0)),
+    'green':   dict(PARK, col=(56, 150, 60)),
+    'blue':    dict(PARK, col=(30, 120, 220)),
+    'rainbow': PARK,
+    'end':     PARK,
 }
 
 # One entry per verse section, in order.
 VERSES = [
-    dict(guest='apple', word='RED', theme='red'),
-    dict(guest='banana', word='YELLOW', theme='yellow'),
-    dict(guest='grapes', word='GREEN', theme='green'),
-    dict(guest='blueberry', word='BLUE', theme='blue'),
+    dict(guest='apple', word='RED', theme='red', motion='roll'),
+    dict(guest='banana', word='YELLOW', theme='yellow', motion='walk'),
+    dict(guest='grapes', word='GREEN', theme='green', motion='hop'),
+    dict(guest='blueberry', word='BLUE', theme='blue', motion='roll'),
 ]
 
 THUMB = dict(lines=['Colors in', 'My Lunchbox'], theme='title')

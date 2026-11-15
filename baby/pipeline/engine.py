@@ -67,6 +67,8 @@ for v in T.VERSES:
     if v['guest'] not in GUEST_ORDER:
         GUEST_ORDER.append(v['guest'])
 ACTION_LINE = getattr(T, 'ACTION_LINE', 2)
+REVEAL = getattr(T, 'REVEAL', True)          # guess pause: silhouette + '?' then Rosy colours the guest in
+REVEAL_AT = getattr(T, 'REVEAL_AT', (5.0, 7.4))  # beats into the verse (line 1 = question, its rest = guessing time)
 
 # ------------------------------------------------------------ timing helpers
 NOTES, _ = events()
@@ -141,12 +143,166 @@ def star(d, x, y, r, col):
 _BG = {}
 
 
+def _cloud(d, x, y, s, a=235):
+    for dx, dy, rr in [(0, 0, 70), (70, 15, 55), (-70, 15, 55), (35, -35, 55)]:
+        d.ellipse([x + dx * s - rr * s, y + dy * s - rr * s, x + dx * s + rr * s, y + dy * s + rr * s], fill=(255, 255, 255, a))
+
+
+def _grad(W, H, top, bot, y0=0.0, y1=1.0):
+    y = np.clip((np.linspace(0, 1, H) - y0) / max(1e-6, y1 - y0), 0, 1)[:, None, None]
+    return (np.array(top)[None, None] * (1 - y) + np.array(bot)[None, None] * y) * np.ones((1, W, 1))
+
+
+SCENES = ('sea', 'farm', 'road', 'sky', 'garden', 'night', 'room', 'park')
+
+
+def _scene(o, th, scene):
+    """Static backdrop for a topic scene (cached). Land = LAY ground ellipse so characters stand on it."""
+    L = LAY[o]; W, H = L['W'], L['H']
+    x0, y0, x1, y1 = L['ground']
+    hz = y0 + 40                       # horizon a bit under the land top
+    sky_t, sky_b = th.get('top', (150, 210, 255)), th.get('bot', (225, 245, 255))
+    if scene == 'night':
+        sky_t, sky_b = (20, 30, 80), (70, 70, 150)
+    arr = _grad(W, H, sky_t, sky_b, 0, hz / H)
+    im = Image.fromarray(arr.astype(np.uint8)).convert('RGBA')
+    d = ImageDraw.Draw(im, 'RGBA')
+    rng = np.random.default_rng(len(scene) * 97 + W)
+    land = th.get('ground', (140, 215, 105))
+    if scene == 'sea':
+        wt = int(H * 0.36)
+        sea = Image.fromarray(_grad(W, H - wt, (90, 200, 240), (20, 110, 190)).astype(np.uint8)).convert('RGBA')
+        im.alpha_composite(sea, (0, wt))
+        d = ImageDraw.Draw(im, 'RGBA')
+        ov = Image.new('RGBA', (W, H), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
+        for k in range(10):                                   # soft light rays
+            x = rng.uniform(0, W); w = rng.uniform(30, 80)
+            od.polygon([(x, wt), (x + w, wt), (x + w - 160, H), (x - 160, H)], fill=(255, 255, 255, 28))
+        im.alpha_composite(ov); d = ImageDraw.Draw(im, 'RGBA')
+        bed = H * 0.9
+        d.ellipse([-W * 0.2, bed, W * 1.2, H + H * 0.3], fill=(236, 205, 140, 255))
+        for k in range(9):                                    # seaweed + rocks on the bottom
+            x = rng.uniform(0, W); hh = rng.uniform(H * 0.1, H * 0.2)
+            for j in range(3):
+                d.line([(x + j * 14, H), (x + j * 14 + 25 * math.sin(j), H - hh)], fill=(40, 150, 90, 255), width=14)
+        for k in range(6):
+            x = rng.uniform(0, W); r = rng.uniform(40, 90)
+            d.ellipse([x - r, H - r * 0.6, x + r, H + r * 0.6], fill=(120, 110, 140, 255))
+        hx, hy, hs = L['host']                                # small sandy island for Tavo
+        d.ellipse([hx - hs * 0.95, hy + hs * 0.32, hx + hs * 0.95, hy + hs * 0.95], fill=(222, 190, 125, 255))
+        d.ellipse([hx - hs * 0.85, hy + hs * 0.36, hx + hs * 0.85, hy + hs * 0.9], fill=(244, 214, 150, 255))
+        return im
+        land = (244, 214, 150)
+    elif scene == 'night':
+        for k in range(70):
+            x, y = rng.uniform(0, W), rng.uniform(0, hz * 0.9)
+            r = rng.uniform(2, 5); d.ellipse([x - r, y - r, x + r, y + r], fill=(255, 255, 220, 230))
+        mx, my, mr = W * 0.82, H * 0.14, min(W, H) * 0.07
+        d.ellipse([mx - mr, my - mr, mx + mr, my + mr], fill=(255, 245, 190, 255))
+        d.ellipse([mx - mr * 0.55, my - mr * 1.05, mx + mr * 1.4, my + mr * 0.9], fill=sky_t + (255,))
+        land = (60, 110, 90)
+    elif scene == 'room':
+        wall = th.get('top', (255, 236, 210))
+        im = Image.fromarray(_grad(W, H, wall, th.get('bot', (255, 220, 190))).astype(np.uint8)).convert('RGBA')
+        d = ImageDraw.Draw(im, 'RGBA')
+        fy = y0 + 60
+        d.rectangle([0, fy, W, H], fill=(196, 140, 92, 255))
+        for k in range(0, W, 140):
+            d.line([(k, fy), (k - 80, H)], fill=(170, 118, 76, 255), width=4)
+        wx, wy, ww = W * 0.72, H * 0.12, min(W, H) * 0.28
+        d.rounded_rectangle([wx, wy, wx + ww, wy + ww * 0.8], radius=18, fill=(170, 220, 255, 255), outline=(255, 255, 255, 255), width=14)
+        d.line([(wx + ww / 2, wy), (wx + ww / 2, wy + ww * 0.8)], fill='white', width=10)
+        d.ellipse([W / 2 - W * 0.38, H - (H - fy) * 0.55, W / 2 + W * 0.38, H + (H - fy) * 0.3], fill=tuple(int(c * 0.45 + 255 * 0.55) for c in th.get('col', (216, 27, 96))) + (255,))
+        return im
+    else:
+        if scene in ('sky', 'park', 'garden', 'farm', 'road'):
+            sx, sy, sr = W * 0.86, H * 0.12, min(W, H) * 0.075
+            d.ellipse([sx - sr * 1.5, sy - sr * 1.5, sx + sr * 1.5, sy + sr * 1.5], fill=(255, 240, 150, 90))
+            d.ellipse([sx - sr, sy - sr, sx + sr, sy + sr], fill=(255, 214, 60, 255))
+        # far hills
+        for k, (c, yy) in enumerate([((170, 225, 150), hz - 70), ((150, 210, 130), hz - 30)]):
+            for j in range(4):
+                cx = W * (j / 3) + (k * 160); r = W * 0.28
+                d.ellipse([cx - r, yy, cx + r, yy + r * 0.9], fill=c + (255,))
+        if scene == 'farm':
+            bx, by = W * 0.8, hz - H * 0.14
+            bw, bh = min(W, H) * 0.22, H * 0.16
+            d.rectangle([bx - bw / 2, by, bx + bw / 2, by + bh], fill=(205, 50, 45, 255))
+            d.polygon([(bx - bw * 0.6, by), (bx, by - bh * 0.6), (bx + bw * 0.6, by)], fill=(150, 40, 40, 255))
+            d.rectangle([bx - bw * 0.15, by + bh * 0.4, bx + bw * 0.15, by + bh], fill=(255, 240, 220, 255))
+            for k in range(0, W, 90):                                 # fence
+                d.rectangle([k, hz - 10, k + 16, hz + 60], fill=(250, 245, 235, 255))
+            d.rectangle([0, hz + 5, W, hz + 20], fill=(250, 245, 235, 255)); d.rectangle([0, hz + 35, W, hz + 50], fill=(250, 245, 235, 255))
+        if scene in ('park', 'garden', 'road'):
+            for k in range(5):
+                tx = rng.uniform(0, W); ty = hz - rng.uniform(0, 40); tr = rng.uniform(60, 110)
+                d.rectangle([tx - 12, ty, tx + 12, ty + tr * 1.3], fill=(130, 90, 60, 255))
+                d.ellipse([tx - tr, ty - tr * 1.4, tx + tr, ty + tr * 0.4], fill=(70, 170, 80, 255))
+    # land
+    g2 = tuple(max(0, v - 25) for v in land)
+    d.ellipse([x0, y0, x1, y1], fill=g2 + (255,))
+    d.ellipse([x0 + 100, y0 + 30, x1 - 100, y1], fill=land + (255,))
+    if scene == 'road':
+        ry = y0 + 95
+        d.rectangle([0, ry - H * 0.05, W, ry + H * 0.05], fill=(90, 90, 100, 255))
+    if scene == 'garden':
+        for k in range(26):
+            fx, fy = rng.uniform(0, W), rng.uniform(y0 + 60, H)
+            c = [(255, 120, 170), (255, 210, 60), (180, 120, 255), (255, 255, 255)][k % 4]
+            for a in range(5):
+                aa = a * 2 * math.pi / 5
+                d.ellipse([fx + 14 * math.cos(aa) - 11, fy + 14 * math.sin(aa) - 11, fx + 14 * math.cos(aa) + 11, fy + 14 * math.sin(aa) + 11], fill=c + (255,))
+            d.ellipse([fx - 8, fy - 8, fx + 8, fy + 8], fill=(255, 190, 40, 255))
+    return im
+
+
+def scene_fx(o, base, theme, t):
+    """Moving parts of a scene (drawn every frame)."""
+    th = T.THEMES[theme]; scene = th.get('scene')
+    if not scene:
+        return
+    L = LAY[o]; W, H = L['W'], L['H']
+    d = ImageDraw.Draw(base, 'RGBA')
+    if scene == 'sea':
+        wt = int(H * 0.36)
+        for k in range(3):
+            pts = [(x, wt + 8 + k * 14 + 9 * math.sin(x / 70 + t * 2.2 + k)) for x in range(0, W + 40, 40)]
+            d.line(pts, fill=(255, 255, 255, 150 - k * 40), width=6)
+        for k in range(18):
+            ph = (t * (0.08 + 0.02 * (k % 4)) + k * 0.137) % 1
+            x = (k * 263) % W + 18 * math.sin(t * 2 + k); y = H - ph * (H - wt)
+            r = 6 + (k % 5) * 3
+            d.ellipse([x - r, y - r, x + r, y + r], outline=(255, 255, 255, 170), width=3)
+    elif scene == 'night':
+        for k in range(12):
+            x = (k * 337) % W; y = (k * 151) % int(H * 0.45)
+            a = int(127 + 127 * math.sin(t * 3 + k))
+            star(d, x, y, 10, (255, 255, 210, a))
+    elif scene in ('sky', 'farm', 'park', 'garden', 'road'):
+        for k, (x, y, s) in enumerate(L['clouds']):
+            xx = (x + t * (14 + 6 * k)) % (W + 400) - 200
+            _cloud(d, xx, y, s * 0.9, 220)
+        if scene == 'road':
+            x0, y0, x1, y1 = L['ground']
+            ry = y0 + 95
+            off = (t * 160) % 160
+            for x in range(-160, W + 160, 160):
+                d.rectangle([x - off, ry - 6, x - off + 80, ry + 6], fill=(255, 255, 255, 255))
+
+
+_BG = {}
+
+
 def background(o, theme):
     key = (o, theme)
     if key in _BG:
         return _BG[key]
     L = LAY[o]; W, H = L['W'], L['H']
     th = T.THEMES[theme]
+    if th.get('scene') in SCENES:
+        im = _scene(o, th, th['scene'])
+        _BG[key] = im
+        return im
     y = np.linspace(0, 1, H)[:, None, None]
     arr = (np.array(th['top'])[None, None] * (1 - y) + np.array(th['bot'])[None, None] * y) * np.ones((1, W, 1))
     im = Image.fromarray(arr.astype(np.uint8))
@@ -164,8 +320,7 @@ def background(o, theme):
         im.paste(lay, (0, 0), m)
         d = ImageDraw.Draw(im, 'RGBA')
         for (x, yy, s) in L['clouds']:
-            for dx, dy, rr in [(0, 0, 70), (70, 15, 55), (-70, 15, 55), (35, -35, 55)]:
-                d.ellipse([x + dx * s - rr * s, yy + dy * s - rr * s, x + dx * s + rr * s, yy + dy * s + rr * s], fill=(255, 255, 255, 235))
+            _cloud(d, x, yy, s)
     else:
         rng = np.random.default_rng(sum(ord(ch) * (i + 1) for i, ch in enumerate(theme)) % 9973)
         for _ in range(26 if o == 'h' else 22):
@@ -179,6 +334,45 @@ def background(o, theme):
     im = im.convert('RGBA')
     _BG[key] = im
     return im
+
+
+_SIL = {}
+
+
+def silhouette(im):
+    k = id(im)
+    if k not in _SIL:
+        a = im.getchannel('A')
+        s = Image.new('RGBA', im.size, (55, 50, 95, 0)); s.putalpha(a.point(lambda v: int(v * 0.92)))
+        _SIL[k] = s
+    return _SIL[k]
+
+
+def motion(kind, beat, amp):
+    """(dx, dy, rot) for a guest's signature movement."""
+    ph = beat % 1.0; b = abs(math.sin(math.pi * ph))
+    if kind == 'swim':
+        return 60 * math.sin(math.pi * beat / 2), -14 * math.sin(math.pi * beat), 8 * math.cos(math.pi * beat / 2)
+    if kind == 'walk':
+        return 45 * math.sin(math.pi * beat), -b * amp * 0.4, 5 * math.sin(2 * math.pi * beat)
+    if kind == 'hop':
+        return 0, -b * amp * 1.8, 0
+    if kind == 'fly':
+        return 40 * math.sin(math.pi * beat / 2), -30 - 25 * math.sin(math.pi * beat), 6 * math.sin(math.pi * beat)
+    if kind == 'roll':
+        return 40 * math.sin(math.pi * beat / 2), -b * amp * 0.3, 20 * math.sin(math.pi * beat / 2)
+    if kind == 'drive':
+        return 70 * math.sin(math.pi * beat / 4), -abs(math.sin(2 * math.pi * beat)) * 6, 0
+    return 0, -b * amp, 0
+
+
+def zoom(base, cx, cy, z):
+    if z <= 1.001:
+        return base
+    W, H = base.size
+    w, h = W / z, H / z
+    x0 = min(max(cx - w / 2, 0), W - w); y0 = min(max(cy - h / 2, 0), H - h)
+    return base.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + w, y0 + h))
 
 
 # ------------------------------------------------------------ lyrics
@@ -270,34 +464,82 @@ def frame(o, si, t):
 
     if kind == 'verse':
         v = T.VERSES[VIDX[si]]
+        scene_fx(o, base, theme, t)
         hx, hy, hs = L['host']
-        # Tavo (host) opens his pencil case and the guest pops out of it
+        li = int(rel // 8)
+        action = (li == ACTION_LINE)
+        r0, r1 = REVEAL_AT if REVEAL else (-1, -0.5)
+        # Tavo: opens his case, listens ("?") during the guess pause, joins the action line
         case_open = rel < 2.0
-        paste(base, spr('tavo', sing, blink(t, 2), hs, case_open=case_open), hx, hy - bounce * 8)
+        if action:
+            tdx, tdy, trot = 0, -abs(math.sin(math.pi * ph)) * 38, 9 * math.sin(math.pi * beat)
+        else:
+            tdx, tdy, trot = 0, -bounce * 8, 0
+        paste(base, spr('tavo', sing, blink(t, 2), hs, case_open=case_open), hx + tdx, hy + tdy, 1, 1, trot)
+        if o == 'h':   # Rubbo + Lino watch from the right and join the action
+            for k, (nm, x, y, sz) in enumerate([('rubbo', 1770, 770, 200), ('lino', 1620, 740, 230)]):
+                bb = abs(math.sin(math.pi * (beat + k * 0.5))) * (30 if action else 6)
+                paste(base, spr(nm, False, blink(t, 6 + k), sz), x, y - bb, 1, 1, (7 * math.sin(math.pi * beat + k)) if action else 0)
         u = min(max(rel / 1.0, 0), 1)
         gx0, gy0 = hx, hy + hs * 0.1
         gx, gy, gs = L['guest']
         e = ease_back(u)
         cx_ = gx0 + (gx - gx0) * min(1, e); cy_ = gy0 + (gy - gy0) * min(1, e)
-        li = int(rel // 8)
-        action = (li == ACTION_LINE)
         amp = 55 if action else 30
         sq = 1 + 0.06 * math.cos(2 * math.pi * ph)
         sc = (0.15 + 0.85 * e) * (1.08 if action else 1.0)
-        rot = 6 * math.sin(math.pi * beat) if action else 0
-        paste(base, spr(v['guest'], sing, blink(t, 1), gs), cx_, cy_ - (bounce * amp if u >= 1 else 0), sc / sq, sc * sq, rot)
+        mv = v.get('motion', 'bounce')
+        if u >= 1 and rel >= r1:
+            mdx, mdy, mrot = motion(mv, beat, amp)
+            if action:
+                mrot += 6 * math.sin(math.pi * beat)
+        else:
+            mdx, mdy, mrot = 0, -(bounce * 10 if u >= 1 else 0), 0
+        g = spr(v['guest'], sing and rel >= r1, blink(t, 1), gs)
+        if abs(sc / sq - 1) > 1e-3 or abs(sc * sq - 1) > 1e-3:
+            g = g.resize((max(1, int(g.width * sc / sq)), max(1, int(g.height * sc * sq))), Image.BILINEAR)
+        if mrot:
+            g = g.rotate(mrot, resample=Image.BILINEAR, expand=True)
+        px, py = cx_ + mdx, cy_ + mdy
+        if rel < r0:                                   # guess: only a silhouette
+            paste(base, silhouette(g), px, py)
+        elif rel < r1:                                 # Rosy colours it in, left -> right
+            w = (rel - r0) / (r1 - r0)
+            sil = silhouette(g).copy()
+            colr = g.copy()
+            cut = int(colr.width * w)
+            m = Image.new('L', colr.size, 0); ImageDraw.Draw(m).rectangle([0, 0, cut, colr.height], fill=255)
+            sil.paste(colr, (0, 0), Image.composite(colr.getchannel('A'), Image.new('L', colr.size, 0), m))
+            paste(base, sil, px, py)
+            rx = px - colr.width / 2 + cut
+            ry = py - colr.height * 0.15 + colr.height * 0.25 * math.sin(w * math.pi * 6)
+            paste(base, spr('rosy', True, False, int(gs * 0.55)), rx + gs * 0.12, ry - gs * 0.12, 1, 1, -35)
+            dd = ImageDraw.Draw(base, 'RGBA')
+            for k in range(4):
+                a = k * 1.7 + rel * 5
+                star(dd, rx + 50 * math.cos(a), ry + 50 * math.sin(a), 16, (255, 215, 0, 220))
+        else:
+            paste(base, g, px, py)
         d = ImageDraw.Draw(base, 'RGBA')
         wx, wy, wsz = L['word']
-        text(d, wx, wy, v['word'], wsz * min(1, ease_back(rel / 1.2)) * (1 + 0.05 * (1 - ph) ** 3), col, stroke=12)
+        if rel < r1 and REVEAL:
+            text(d, wx, wy, '?', wsz * min(1, ease_back(rel / 1.2)) * (1 + 0.08 * math.sin(math.pi * beat)), col, stroke=12)
+            if 1.0 < rel < r0:   # Tavo's thinking bubble
+                bx_, by_ = hx + hs * 0.42, hy - hs * 0.62
+                d.ellipse([bx_ - 48, by_ - 48, bx_ + 48, by_ + 48], fill=(255, 255, 255, 235), outline=col + (255,), width=5)
+                d.ellipse([bx_ - 70, by_ + 52, bx_ - 52, by_ + 70], fill=(255, 255, 255, 235))
+                text(d, bx_, by_ + 2, '?', 70, col, stroke=0)
+        else:
+            text(d, wx, wy, v['word'], wsz * min(1, ease_back((rel - (r1 if REVEAL else 0)) / 1.2)) * (1 + 0.05 * (1 - ph) ** 3), col, stroke=12)
         # collected guests
         prev = [T.VERSES[k]['guest'] for k in range(VIDX[si])]
         if o == 'h':
-            for k, g in enumerate(prev):
-                paste(base, spr(g, False, False, 130), L['W'] - 110 - k * 120, 110)
+            for k, gg in enumerate(prev):
+                paste(base, spr(gg, False, False, 130), L['W'] - 110 - k * 120, 110)
         else:
             n = len(prev)
-            for k, g in enumerate(prev):
-                paste(base, spr(g, False, False, 110), L['W'] / 2 + (k - (n - 1) / 2) * 115, 385)
+            for k, gg in enumerate(prev):
+                paste(base, spr(gg, False, False, 110), L['W'] / 2 + (k - (n - 1) / 2) * 115, 385)
         if action:
             d = ImageDraw.Draw(base, 'RGBA')
             R = gs * 0.62
@@ -305,9 +547,13 @@ def frame(o, si, t):
                 a = k * math.pi / 3 + beat * 0.8
                 r = R + 20 * math.sin(beat * math.pi)
                 star(d, gx + r * math.cos(a), gy + r * 0.75 * math.sin(a), 26, (255, 215, 0, 230))
+        # slow push-in towards the guest (reflective "camera zoom", no cuts)
+        z = 1.0 + 0.06 * min(1, max(0, rel - 1) / 30.0)
+        base = zoom(base, gx, gy, z)
         draw_lyrics(o, base, sec, beat, col)
 
     elif kind in ('chorus', 'outro'):
+        scene_fx(o, base, theme, t)
         n = len(GUEST_ORDER)
         if o == 'h':
             gsz = L['ch_guest_size'] if n <= 4 else 260
@@ -333,6 +579,7 @@ def frame(o, si, t):
         draw_lyrics(o, base, sec, beat, col)
 
     elif kind == 'intro':
+        scene_fx(o, base, theme, t)
         tx, ty, ts = L['intro_tavo']
         open_ = rel >= 3.5
         wave = 1.0 <= rel < 3.5
@@ -355,6 +602,7 @@ def frame(o, si, t):
         text(d, bx, by, 'Baby Collective', bs, (90, 90, 110), stroke=6)
 
     elif kind == 'end':
+        scene_fx(o, base, theme, t)
         tx, ty, ts = L['end_tavo']
         paste(base, spr('tavo', sing, blink(t, 2), ts, wave=True), tx, ty, 1, 1, 4 * math.sin(2 * math.pi * beat * 0.5))
         row = ['rosy', 'rubbo', 'lino'] + GUEST_ORDER[:1]
@@ -420,11 +668,17 @@ def render_range(o, t0, t1, out, workers=2):
 def final(out, max_mb=24):
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', 'video_h.mp4', '-i', 'final_audio.wav', '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
                     '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out], check=True)
-    if os.path.getsize(out) > max_mb * 1e6:  # keep uploads small enough for GitHub raw + browser transfer
-        tmp = out + '.small.mp4'
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', out, '-c:v', 'libx264', '-preset', 'medium', '-crf', '25', '-tune', 'animation', '-pix_fmt', 'yuv420p',
-                        '-c:a', 'copy', '-movflags', '+faststart', tmp], check=True)
-        os.replace(tmp, out)
+    src = out + '.src.mp4'
+    for crf in (25, 28, 31):          # keep uploads small enough for GitHub raw + browser transfer
+        if os.path.getsize(out) <= max_mb * 1e6:
+            break
+        if not os.path.exists(src):
+            os.replace(out, src)
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', src, '-c:v', 'libx264', '-preset', 'medium', '-crf', str(crf), '-tune', 'animation', '-pix_fmt', 'yuv420p',
+                        '-c:a', 'copy', '-movflags', '+faststart', out], check=True)
+    if os.path.exists(src):
+        os.remove(src)
+    print(f'{out}: {os.path.getsize(out) / 1e6:.1f} MB')
 
 
 def short(t0, dur, out):

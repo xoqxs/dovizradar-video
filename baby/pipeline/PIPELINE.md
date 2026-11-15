@@ -1,4 +1,9 @@
-# Sing with Tavo – Baby Collective pipeline v2 (owner: Kadir Pars)
+# Sing with Tavo – Baby Collective pipeline v3 (owner: Kadir Pars)
+
+v3 (15 Nov 2026, approved by Kadir Bey): Tavo now really SINGS (every syllable pitched to its melody note, voice.py + pyworld),
+every song has its own animated SCENE (sea, farm, road, sky, garden, night, room, park), guests have their own MOTION,
+a GUESS PAUSE (silhouette + '?' while the question is sung, then Rosy colours the guest in), Tavo/Rubbo/Lino join the
+action line, and a slow camera push-in. Render takes ~6–7 min.
 
 Channel: YouTube @Babycollective (UCTmbZBzBjVERcxbOJjsWVeA). English, ages 2–6. Series brand: **Sing with Tavo**.
 Schedule (Europe/Istanbul 16:13): **Mon / Wed / Fri** = 1 new song (16:9, ~2:20–2:40) + 1 native vertical Short from it.
@@ -9,7 +14,7 @@ Any other day (manual run) = new song.
 - Cast (chars.py): **Tavo** – baby fox host, green scarf, yellow pencil case full of crayons (NO backpack, NO blue
   accessories). Friends: **Rosy** (pink crayon, yellow bow), **Rubbo** (eraser, purple sleeve), **Lino** (wooden ruler).
   Every song: Tavo opens his pencil case and the song's "guests" fly out of it.
-- Voice: Kokoro **af_heart** for Tavo, always (topic.VOICE = 'af_heart').
+- Voice: Kokoro **af_heart** for Tavo, always (topic.VOICE = 'af_heart'); lyrics are SUNG (pitched one octave below the melody).
 - Intro: "Sing with Tavo" logo card + 4-note signature sting (music.py STING) + Tavo saying INTRO_LINE.
 - engine.py (16:9 + 9:16 + thumbnail renderer), compile.py, music.py, voice.py, mix.py, chars.py.
   Do NOT rewrite them. Only if something is truly broken: smallest possible fix, note it in baby/gunluk.md.
@@ -19,7 +24,7 @@ Any other day (manual run) = new song.
 ## 1. Setup (each run)
 ```
 W=/home/claude/bc; mkdir -p $W && cd $W && cp <repo>/baby/pipeline/*.py .
-pip install --break-system-packages -q kokoro-onnx soundfile fonttools scipy
+pip install --break-system-packages -q kokoro-onnx soundfile fonttools scipy pyworld
 # font (Fredoka Bold, OFL) -> $W/Fredoka-Bold.ttf
 mkdir -p /tmp/f && cd /tmp/f && npm pack @fontsource/fredoka@latest >/dev/null && tar xzf *.tgz && \
 python3 -c "from fontTools.ttLib import TTFont; f=TTFont('/tmp/f/package/files/fredoka-latin-700-normal.woff'); f.flavor=None; f.save('/home/claude/bc/Fredoka-Bold.ttf')"; cd $W
@@ -43,15 +48,21 @@ counting down, colors of nature, sizes (big/small), music instruments, kitchen h
 - `L(text, notes)`: syllables split by `|`, `_` after a syllable = space. Syllable count == pitched notes;
   beats per line sum to 8 (asserts check). End lines with 2–3 beats rest. Melody G4–G5 (E4 ok), stepwise, singable;
   chords per 2 beats from C F G Am only.
+- Verse line 1 MUST be the question ("Splash, splash, who is in the sea?") ending with 3 beats rest: that rest is the
+  child's guessing time (silhouette + '?'); Rosy colours the guest in at beats 5–7.4 and line 2 names it.
 - Line 3 of each verse (index 2 = ACTION_LINE) is the fun action/sound line ("Pop, pop, yum yum yum") – stars burst there.
 - Call-and-response, lots of repetition, simple words. Verse line 1 asks, line 2 answers with the guest.
 
 ### 2c. topic.py
-- TITLE (≤ 28 chars, catchy), TOPIC, VOICE='af_heart', INTRO_LINE ("Hi friends! It's Tavo! Let's sing about …!"),
+- TITLE (≤ 28 chars, catchy), TOPIC, VOICE='af_heart', INTRO_LINE = a tiny STORY situation, not a generic hello
+  ("Hi friends! It's Tavo! I'm at the beach with my crayons. Who lives in the sea? Let's sing!" – max 2 short sentences),
   OUTRO_LINE ("Bye bye, friends! See you next time with Tavo!" – may vary slightly), CHORUS_TITLE, OUTRO_TITLE (≤ 18 chars).
-- THEMES: pastel gradients (top/bot), strong accent `col`, optional rainbow=True. Must contain 'title', 'end'
-  and every theme name used in song.py.
-- VERSES: one dict per verse section in order: guest (key of GUESTS), word (BIG word, ≤ 9 letters, CAPS), theme.
+- THEMES: EVERY theme gets `scene=` matching the song's world (sea, farm, road, sky, garden, night, room, park) –
+  usually one base dict and per-verse copies with a different accent `col` (see the example). top/bot = sky colours
+  (wall colours for 'room'). Must contain 'title', 'end' and every theme name used in song.py. Do NOT reuse the same
+  scene in two songs in a row.
+- VERSES: one dict per verse section in order: guest (key of GUESTS), word (BIG word, ≤ 9 letters, CAPS), theme,
+  motion = swim | walk | hop | fly | roll | drive | bounce (what that guest really does).
 - GUESTS: one sprite function per verse, signature `f(mouth_open=False, blink=False, size=440)`, drawn on an 880 px
   canvas with `canvas(S)`, `face(d, cx, cy, s, mouth_open, blink)`, `finish(im, size)` so they match Tavo's flat cute style.
   Simple bold shapes, 2–4 colours, a face on every guest. Original designs only – no known characters, brands, logos.
@@ -62,10 +73,11 @@ counting down, colors of nature, sizes (big/small), music instruments, kitchen h
 python3 -c "import song, topic"                      # asserts pass
 python3 music.py && python3 voice.py && python3 mix.py   # music.wav, voice.wav, voice_env.npy, final_audio.wav
 python3 engine.py chorus_starts                      # e.g. "ch1: 43.64s (17.5s long)" / "ch2: 96.00s (34.9s long)"
-# LOOK before rendering (Read each jpg): intro ~5 s, a verse word moment, a chorus, the end – in h AND v
+# LOOK before rendering (Read each jpg): intro ~5 s, a verse at +3 beats (silhouette), +6 beats (Rosy colouring),
+# +10 beats (revealed), a chorus, the end – in h AND v
 python3 engine.py still h 5.5 a.jpg ; python3 engine.py still v 5.5 b.jpg   (+ 3–4 more times)
-python3 engine.py render                             # -> video_h.mp4 (~2.5 min)
-python3 engine.py final  bc-YYYY-MM-DD-<slug>.mp4    # loudnorm -14 LUFS, auto-compress ≤ 24 MB
+python3 engine.py render                             # -> video_h.mp4 (~6–7 min)
+python3 engine.py final  bc-YYYY-MM-DD-<slug>.mp4    # loudnorm -14 LUFS, auto-compress ≤ 24 MB (prints size)
 python3 engine.py short  <ch2 start> <25–40> bc-YYYY-MM-DD-<slug>-short.mp4   # native 1080x1920
 python3 engine.py thumb  bc-YYYY-MM-DD-<slug>-kapak.jpg                           # 1280x720
 ```
@@ -110,3 +122,9 @@ re-rendered from them for compilations).
 
 ## 7. Log – baby/gunluk.md
 | date | topic | song title | voice | long link | short link | status |  (compilation: topic "derleme", short "–").
+
+## 8. Weekly ideas (human direction – Kadir Bey)
+baby/fikirler.md lists the next song ideas (one line each: date | topic | title idea | scene | 4 guests | mini-story).
+Song days take the first line without "[x]" and mark it "[x] YYYY-MM-DD". Sunday's run adds 3 new ideas for the next
+week (varied topics/scenes, not in the last 14 days) and sends them to Kadir Bey in the report so he can change them.
+If he has edited the file, his lines win.
