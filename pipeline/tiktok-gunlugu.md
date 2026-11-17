@@ -63,3 +63,4 @@
 | 2026-11-15 | tt-2026-11-15-gece.mp4 | gece – Kredi borcunu ödemezsem ne olur? Tüketici Kredisi Sözleşmeleri | yayınlandı (inceleniyor; açıklama listede doğru) |
 | 2026-11-16 | tt-2026-11-16-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (16 Kasım 2026, 11.40) Gra | YANLIŞ HESABA yüklendi (smartpicksdailyfinds, @dovizradar değil; inceleniyor/Sadece ben) – Kadir Bey'e bildirildi; sonraki slotlar oturumu kontrol etsin |
 | 2026-11-16 | tt-2026-11-16-kapanis.mp4 | kapanış – Altın pazartesi sabahki kaybının bir kısmını geri aldı | yayınlandı 17 Kasım 02:50 (Kadir Bey isteği, gecikmeli; @dovizradar doğrulandı; inceleniyor) |
+| 2026-11-17 | tt-2026-11-17-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (17 Kasım 2026, 11.40) Gra | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru) |
