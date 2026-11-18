@@ -12,3 +12,4 @@
 | 2026-11-15 | derleme – Splash Who Is in the Sea?, Beep Beep Who Is Here?, Who Says Moo?, Look Up at the Sky | Sing with Tavo Song Mix: Sea, Vehicles, Farm & Weather | af_heart | https://youtu.be/3jYXeqwvLOc | – | yayınlandı |
 | 2026-11-13 | bahçe böcekleri | Tiny Bugs in My Garden | af_heart | https://youtu.be/hTmJRDkdl0Y | https://youtube.com/shorts/R0N-aOvLJA8 | yayınlandı (telafi, 15 Kasım'da) |
 | 2026-11-16 | gece / yatma vakti | Who Is Awake at Night? | af_heart | https://youtu.be/23FHrD_k5fs | https://youtube.com/shorts/mzJOHL38DU0 | yayınlandı |
+| 2026-11-18 | sayma 1–4 / oyuncaklar | Tidy Up and Count! | af_heart | https://youtu.be/uEfuRmjCdrc | https://youtube.com/shorts/liMW8xkJp4o | yayınlandı |
