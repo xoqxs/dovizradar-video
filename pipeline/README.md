@@ -98,3 +98,5 @@ TikTok sayfası dış adreslerden fetch'e izin vermez (CSP); dosya seçici de ku
 
 ## FİYAT VİDEOLARI (Kadir Bey 4 Kasım 2026)
 YouTube'da her gün sabah (10:15) 1, akşam (18:15) 1 dolar/euro/altın fiyat videosu. Günlükte tür: fiyat-sabah / fiyat-akşam. YOUTUBE SEO madde 7'deki "aynı gün aynı türden 2 video" yasağı bu ikiliye uygulanmaz; ama iki videonun kancası, görselleri, sahne sırası ve başlığı farklı olmalı. Madde 1'deki "günün açısı" zorunlu değil: asıl konu güncel fiyatlardır.
+
+NOT (18 Kasım 2026 kapanış): Yükleme ekranında açıklama textContent'te doğru görünmesine rağmen paylaşımda dosya adı kaldı (sayaç "21/4000"de kalmıştı). Paylaş'tan ÖNCE sayaç "<metin uzunluğu>/4000" olmalı; değilse yeniden tıkla/yaz. Olursa: /tiktokstudio/content → satırdaki kalem simgesi → Alt yazı düzelt → Kaydet (günde 1 kez düzenlenebilir).
