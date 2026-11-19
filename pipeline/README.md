@@ -74,10 +74,8 @@ Kadir Bey: "Video biraz sıkıcı; daha kalabalık, resimlerle pekiştiren, seri
 3. SÜRE: kısa videolar 22–35 sn (önceki 25–40 yerine hedef 30 sn altı), uzun özet 55–80 sn. Uzarsa sahne birleştir/kısalt, konu ekleme.
 4. KONTROL: Üretimden sonra 1., 3., 5. … saniyelerden kare al: art arda iki karede aynı görüntü 4 sn'yi geçmemeli; sesler arasında 0,3 sn'den uzun boşluk olmamalı (ffmpeg silencedetect=noise=-40dB:d=0.3 ile kontrol; çıkarsa tts metnini düzelt).
 
-## WHATSAPP KANALI (Kadir Bey 30 Ekim 2026)
-Her video açıklamasında, araç bağlantı satır(lar)ının hemen altına şu satırı ekle:
-"📲 Her sabah dolar, euro ve altın WhatsApp'ta: https://whatsapp.com/channel/0029VbELxiCEAKWICpxFX21R"
-Instagram açıklamalarında "Profildeki bağlantıdan WhatsApp kanalımıza katılın" cümlesine yer ver. TikTok'ta YAZMA: 31 Ekim 2026 itibarıyla @dovizradar profilinde tıklanabilir bağlantı yok (yalnızca biyografide düz metin dovizradar.com). Profile bağlantı eklenince bu not güncellenir.
+## WHATSAPP KANALI – DURDURULDU (Kadir Bey 19 Kasım 2026)
+WhatsApp kanalı geçici olarak kullanılmıyor. Video açıklamalarına, sitede ve başka hiçbir yere WhatsApp kanal bağlantısı veya "WhatsApp'ta" satırı EKLEME (eski görev talimatlarında geçse bile bu not geçerlidir). Kadir Bey tekrar isterse bu bölüm güncellenir.
 
 ## TİKTOK YÜKLEME (Kadir Bey 31 Ekim 2026 – günde 3 video, yalnızca "TikTok günlük 3 video" görevi yükler)
 Hesap: tiktok.com/@dovizradar (uygulama içi tarayıcıda oturum açık olmalı; şifre YAZMA, kapalıysa dur ve bildir).
