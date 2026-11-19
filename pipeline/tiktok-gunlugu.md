@@ -72,3 +72,4 @@
 | 2026-11-18 | tt-2026-11-18-aksam.mp4 | akşam – Emekli maaşında yeni düzenleme ne zaman? Erdoğan 18 Kasım | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 307/4000) |
 | 2026-11-18 | tt-2026-11-18-gece.mp4 | gece – SGK aktif mi, nasıl öğrenilir? İşten çıkınca sağlık hakkı 10 | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 295/4000) |
 | 2026-11-19 | tt-2026-11-19-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (19 Kasım 2026, 11.40) Çey | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 236/4000) |
+| 2026-11-19 | tt-2026-11-19-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (19 Kasım 2026, 17.40) Ons | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 283/4000) |
