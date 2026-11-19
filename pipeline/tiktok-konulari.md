@@ -79,7 +79,7 @@ kredi, konut kredisi, ihtiyaç kredisi, kredi kartı, kredi notu, faiz, mevduat 
 
 ## Havuz eki (18 Kasım 2026 TikTok arama önerilerinden)
 - [ ] Maaş hesabına bloke konulur mu? (arama: maaş hesabına bloke konulur mu; İİK m.83 haczedilemezlik + banka takas/mahsup kuralı; Yargıtay/BDDK, 2 kaynak) → /p/brutten-nete-maas-hesaplama.html
-- [ ] e-Devlet'te birikmiş para nasıl sorgulanır? (arama: e devlet birikmiş para / sgk parası nasıl alınır; zamanaşımına uğrayan mevduat – TMSF/BDDK; ödenmemiş SGK ödemeleri – SGK; yalnızca resmi adımlar)
+- [x] 2026-11-19 e-Devlet'te birikmiş para nasıl sorgulanır? (gece; arama: e devlet birikmiş para nasıl çekilir / e devlet birikmiş para sorgulama; Bankacılık K. m.62: 10 yıl işlem görmeyen mevduat/emanet/alacak zamanaşımı; liste Şubat başı–Mayıs sonu, son başvuru 15 Haziran, sonra TMSF'ye gelir – Alomaliye (TMSF açıklaması, 11 Şub 2026) + e-yasamrehberi (8 Eki 2026) + NTV (AA); sorgu e-Devlet veya zamanasimisorgu.tmsf.org.tr, ücretsiz – NTV + Türkgün (22 Tem 2026)) → /p/mevduat-faizi-hesaplama.html
 - [ ] Vergi affı 2026 var mı? (arama: vergi affı 2026 son dakika / vergi faizleri silinecek mi; yalnızca TBMM'ye sunulmuş/Resmî Gazete'de yayımlanmış metin; kesinleşmediyse "henüz yok" de) → /p/yuzde-hesaplama.html
 - [ ] Kredi borçları silinecek mi 2026? (arama: kredi borçları silinecek mi 2026; yalnızca resmi açıklama/yasa; yoksa "böyle bir karar yok" + mevcut yapılandırma hakları) → /p/kredi-hesaplama.html
 - [ ] Faizsiz kredi veren bankalar 2026 (arama: faizsiz kredi veren bankalar 2026; en az 3 bankanın resmi kampanya sayfası, tutar ve vade aralığı; tek banka önerme) → /p/kredi-hesaplama.html
