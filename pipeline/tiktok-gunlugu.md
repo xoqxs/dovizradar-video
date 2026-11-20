@@ -75,3 +75,4 @@
 | 2026-11-19 | tt-2026-11-19-kapanis.mp4 | kapanış – Dolar ve altın günü nasıl kapattı? (19 Kasım 2026, 17.40) Ons | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 283/4000) |
 | 2026-11-19 | tt-2026-11-19-aksam.mp4 | akşam – Memur zammı Ocak 2027 şu ana kadar yüzde kaç? 19 Kasım 202 | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 345/4000) |
 | 2026-11-19 | tt-2026-11-19-gece.mp4 | gece – e-Devlet'te birikmiş para nasıl sorgulanır? Bankada 10 yıl | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 369/4000) |
+| 2026-11-20 | tt-2026-11-20-ogle.mp4 | öğle – Dolar, euro, altın bugün ne kadar? (20 Kasım 2026, 11.40) Gra | yayınlandı (uygulama içi tarayıcı, @dovizradar doğrulandı; inceleniyor; açıklama listede doğru, sayaç 258/4000) |
