@@ -13,3 +13,4 @@
 | 2026-11-13 | bahçe böcekleri | Tiny Bugs in My Garden | af_heart | https://youtu.be/hTmJRDkdl0Y | https://youtube.com/shorts/R0N-aOvLJA8 | yayınlandı (telafi, 15 Kasım'da) |
 | 2026-11-16 | gece / yatma vakti | Who Is Awake at Night? | af_heart | https://youtu.be/23FHrD_k5fs | https://youtube.com/shorts/mzJOHL38DU0 | yayınlandı |
 | 2026-11-18 | sayma 1–4 / oyuncaklar | Tidy Up and Count! | af_heart | https://youtu.be/uEfuRmjCdrc | https://youtube.com/shorts/liMW8xkJp4o | yayınlandı |
+| 2026-11-20 | müzik aletleri | Boom, Ding, Who Can Play? | af_heart | https://youtu.be/lmNisVqpB9w | https://youtube.com/shorts/k8_Z0OqJ2f0 | yayınlandı |
