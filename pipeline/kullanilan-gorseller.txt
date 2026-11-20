@@ -17,7 +17,6 @@
 2026-10-27	File:US Capitol dome Jan 2006.jpg
 2026-10-27	File:Türkiye Cumhuriyet Merkez Bankası Denizli Şubesi 01.jpg
 2026-10-27	File:Euro Changeover Board of Ireland calculator 1.jpg
-2026-10-27	File:Chair of the Federal Reserve Kevin Warsh at the White House on May 22, 2026 (cropped).jpg
 2026-10-28	File:50 Türk Lirası front.jpg
 2026-10-28	File:Hundred dollar bill 01.jpg
 2026-10-28	File:Gold bullion 2.jpg
@@ -129,7 +128,6 @@
 2026-10-31	File:CTBC payment terminal at self-checkout of Carrefour Rende Store.jpg
 2026-11-01	File:Shopping the Kadıköy Market (6418910915).jpg
 2026-11-01	File:Türkiye İstatistik Kurumu, Ankara 2023.jpg
-2026-11-01	File:Shopping the Kadıköy Market (6418910915).jpg
 2026-11-01	File:Garlic and vegetables in Kadikoy.JPG
 2026-11-01	File:Shopper paying for groceries at cashier at Aeon Mall Morioka.jpg
 2026-11-01	File:Shopping Trolleys (809290640) (cropped).jpg
@@ -183,7 +181,6 @@
 2026-11-02	File:Mersin port August 2006.jpg
 2026-11-02	File:5 United States dollar banknotes (83434).jpg
 2026-11-02	File:Bitcoin on Laptop Keyboard.jpg
-2026-11-02	File:Metal Smelting (919).jpg
 2026-11-02	File:Union 76 gas price digital sign.jpg
 2026-11-02	File:Pump at RaceTrac, Bradford County, Florida.jpg
 2026-11-02	File:Gas station Senegal.jpg
@@ -223,10 +220,8 @@
 2026-11-02	File:Wallet and money 20170827.jpg
 2026-11-02	File:Garment Factory Workers in Thailand.jpg
 2026-11-02	File:Kızılay Center 2017.jpg
-2026-11-02	File:Istanbul photos by J.Lubbock 2015 641.jpg
 2026-11-02	File:Migros türk.jpg
 2026-11-02	File:Citizen SLD-100NR calculator.jpg
-2026-11-02	File:Istanbul crowd - Flickr - brewbooks.jpg
 2026-11-02	File:Lira Turkey.jpeg
 2026-11-02	File:50 Turkish lira.jpg
 2026-11-02	File:Osmanlı Bankası Binası, Yenicami.jpg
@@ -238,7 +233,6 @@
 2026-11-02	File:Aurora electronic calculator DT210 08.jpg
 2026-11-02	File:Stack of coins 0214.jpg
 2026-11-02	File:Stacks of Canadian Coins (16269886909).jpg
-2026-11-02	File:Stack of coins 0214.jpg
 2026-11-02	File:Privileg 862 M.jpg
 2026-11-03	File:Bursa market Turkey 2013 3.jpg
 2026-11-03	File:Fresh produce shelves in L Intermarche supermarket in Quebec City.jpg
@@ -336,7 +330,6 @@
 2026-11-04	File:Two 20kr gold coins.png
 2026-11-04	File:Stack of 100 dollar bills (cropped).jpg
 2026-11-04	File:Grand Bazaar Istanbul 2007 016.jpg
-2026-11-04	File:Euro coins and banknotes (cropped).jpg
 2026-11-04	File:Capitol at Dusk 2.jpg
 2026-11-04	File:Chip silver bullion bar.jpg
 2026-11-04	File:Bullion Gold bar at Swiss Money Museum (Ank Kumar, Infosys).jpg
@@ -354,7 +347,6 @@
 2026-11-04	File:Gold bars from Spanish treasure ships on display at the Mel Fisher Museum, Key West, Florida.jpg
 2026-11-04	File:Elderly Man on Street - Goreme - Cappadocia - Turkey (5761071363).jpg
 2026-11-04	File:QNB Finansbank Kristal Kule.jpg
-2026-11-04	File:Garanti Bank Istiklal.jpg
 2026-11-04	File:Akbank Interior.jpg
 2026-11-04	File:200 Türk Lirası front.jpg
 2026-11-04	File:Antalya, Turkey 9 March 2022 - PTT ATM.jpg
@@ -370,7 +362,6 @@
 2026-11-04	File:Courtroom One Gavel - Flickr - Joe Gratz.jpg
 2026-11-04	File:Lira Turkey.jpeg
 2026-11-04	File:Bastida mother-child-beach.jpg
-2026-11-04	File:Court of Cassation in Ankara.jpg
 2026-11-04	File:Court of Cassation in Ankara2.jpg
 2026-11-04	File:Tappr Card Reader NFC.jpg
 2026-11-04	File:Turkish Lira Series Banknotes (Modern).png
@@ -841,7 +832,6 @@
 2026-11-14	File:Turkish 10000 lira banknote (52162732758).jpg
 2026-11-14	File:Vergi iletişim merkezi.jpg
 2026-11-14	File:Muğla revenue administration building 5674.jpg
-2026-11-14	File:Gavel (8890290708).jpg
 2026-11-14	File:HP 35 Calculator.jpg
 2026-11-14	File:200 Türk Lirası reverse.jpg
 2026-11-14	File:Türk lirası (Specimen).jpg
@@ -871,7 +861,6 @@
 2026-11-15	File:Gold ingots in Ming.JPG
 2026-11-15	File:VakıfBank ATM, Istanbul.jpg
 2026-11-15	File:Legal Contract & Signature - Warm Tones.jpg
-2026-11-15	File:Iskenderun Courthouse 6634.jpg
 2026-11-15	File:VakıfBank ATM 4 Levent.jpg
 2026-11-15	File:PTT ATM.jpg
 2026-11-15	File:Levent Skyline4.JPG
@@ -1038,8 +1027,6 @@
 2026-11-19	File:Wallet and money 20170827.jpg
 2026-11-19	File:50 Türk Lirası reverse.jpg
 2026-11-19	File:Bank vault door.jpg
-2026-11-19	File:Wallet and money 20170827.jpg
-2026-11-19	File:50 Türk Lirası reverse.jpg
 2026-11-19	File:Inside a Post Office Savings Bank deposit book.jpg
 2026-11-19	File:Mobile banking deposit (5494592023).jpg
 2026-11-19	File:VakıfBank ATM, Istanbul.jpg
@@ -1106,3 +1093,18 @@
 2026-11-20	File:Calendar 2.jpg
 2026-11-20	File:BOĞAZDA KUTLAMA GECESİ... - panoramio.jpg
 2026-11-20	File:Kadıköy Pier and ŞH-Fatih ferry.jpg
+2026-11-20	File:Padlock with chain.jpg
+2026-11-20	File:Vb-atm.jpg
+2026-11-20	File:2023-03-13 paycheck-salary.jpg
+2026-11-20	File:Ziraat Bankasi.jpg
+2026-11-20	File:Kırklareli Ziraat Bankası Binası 01.jpg
+2026-11-20	File:ATM (3179523607).jpg
+2026-11-20	File:Ziraat Bankası, Kapadokya (2025).jpg
+2026-11-20	File:Block Gavel (8595524355).jpg
+2026-11-20	File:Notary public assisting with document signing.png
+2026-11-20	File:Euro Changeover Board of Ireland calculator 2.jpg
+2026-11-20	File:Credit card terminal.jpg
+2026-11-20	File:BankStatementChequing.png
+2026-11-20	File:Padlock and chain 0675.jpg
+2026-11-20	File:Credit card terminal in Laos.jpg
+2026-11-20	File:3D Judges Gavel.jpg
