@@ -25,7 +25,7 @@ Seçim sırası: (1) o günün TikTok arama önerileri + doğrulanmış gündem,
 - Her videoda açıkça: "Bu Merkez Bankası anketindeki piyasa beklentisidir, kesin rakam değildir; Döviz Radar tahmin yapmaz." Rakamlar TCMB'nin anket sayfası + 1 haber kaynağıyla doğrulanır. Al-sat tavsiyesi YOK.
 - İlk 2 saniye: soru + net rakam (ör. "Dolar yıl sonunda kaç TL? Merkez Bankası anketi: 51,61").
 - [ ] Enflasyon yıl sonunda yüzde kaç olacak? (TCMB Kasım 2026 anketi: yıl sonu ve 12 ay sonrası TÜFE beklentisi; TCMB + 1 haber) → /p/enflasyon-hesaplama.html
-- [ ] Faiz yıl sonunda kaç olacak? (TCMB Kasım 2026 anketi: Aralık PPK ve 12 ay sonrası politika faizi beklentisi; güncel politika faizi %36) → /p/tcmb-faiz-kararlari.html
+- [x] 2026-11-21 Faiz düşecek mi? / Faiz yıl sonunda kaç olacak? (akşam gündem; arama: faiz / faizsiz kredi / faize para yatırmak; politika faizi %36, 22 Ekim'de %37'den – Kamu1 (30 Eki) + Demokrat Gazetesi; son PPK 10 Aralık 2026 – aynı iki kaynak; TCMB Kasım anketi (13 Kasım, 70 katılımcı): Aralık PPK %35, sonraki iki toplantı %34,30 / %33,37, 12 ay sonrası %28,90 – Euronews + Emlak Haber Ajansı; Dünya Aralık %35'i teyit) → /p/tcmb-faiz-kararlari.html
 - [ ] Dolar yıl sonunda kaç TL olacak? – ARALIK anketi (yayımlandığı gün; Kasım: yıl sonu 51,61, 12 ay 60,77 ile kıyas) → /p/dolar-kac-tl.html
 
 ## Tohum anahtar kelimeler (öneri listesi için)
