@@ -15,3 +15,4 @@
 | 2026-11-18 | sayma 1–4 / oyuncaklar | Tidy Up and Count! | af_heart | https://youtu.be/uEfuRmjCdrc | https://youtube.com/shorts/liMW8xkJp4o | yayınlandı |
 | 2026-11-20 | müzik aletleri | Boom, Ding, Who Can Play? | af_heart | https://youtu.be/lmNisVqpB9w | https://youtube.com/shorts/k8_Z0OqJ2f0 | yayınlandı |
 | 2026-11-22 | derleme – Boom Ding Who Can Play?, Tidy Up and Count!, Who Is Awake at Night?, Tiny Bugs in My Garden | Sing with Tavo Mix: Music, Toys, Night & Bugs | af_heart | https://youtu.be/ecPTx0i6sRk | – | yayınlandı |
+| 2026-11-23 | vücut bölümleri / hareket | Who Can Move With Me? | af_heart | https://youtu.be/Bk7ANP3L16E | https://youtube.com/shorts/rdbYFkdpXx8 | yayınlandı |
